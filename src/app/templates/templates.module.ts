@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TemplateVoyagerComponent } from './template-voyager/template-voyager.component';
 import { ComponentsModule } from '../components/components.module';
 import { DirectivesModule } from '../directives/directives.module';
-import { SharedModule } from '../shared/shared.module';
+import { LayoutModule } from '../layout/layout.module';
 
 
 
@@ -15,7 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     ComponentsModule,
     DirectivesModule,
-    SharedModule
+    LayoutModule
   ],
   exports: [
     TemplateVoyagerComponent

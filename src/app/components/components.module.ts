@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 // --- LIKUID MODULES --------------------------------
 import { DirectivesModule } from '../directives/directives.module';
+import { LayoutModule } from '../layout/layout.module';
 // --- COMPONENTS ------------------------------------
 import { LkdNavbarComponent } from './lkd-navbar/lkd-navbar.component';
 import { LkdFooterComponent } from './lkd-footer/lkd-footer.component';
@@ -20,8 +21,6 @@ import {
 } from './lkd-alert/lkd-alert.component';
 import { LkdCardComponent } from './lkd-card/lkd-card.component';
 import { LkdTableComponent } from './lkd-table/lkd-table.component';
-import { LkdBlockComponent } from './lkd-block/lkd-block.component';
-import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -37,12 +36,12 @@ import { SharedModule } from '../shared/shared.module';
     LkdAlertLinkDirective,
     LkdCardComponent,
     LkdTableComponent,
-    LkdBlockComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     DirectivesModule,
+    LayoutModule
   ],
   exports: [
     LkdNavbarComponent,
@@ -57,7 +56,6 @@ import { SharedModule } from '../shared/shared.module';
     LkdAlertMessageDirective,
     LkdAlertLinkDirective,
     LkdCardComponent,
-    LkdBlockComponent
   ]
 })
 export class ComponentsModule { }
