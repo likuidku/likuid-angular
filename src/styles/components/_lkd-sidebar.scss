@@ -1,0 +1,55 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-sidebar($color: $text-color, $back: 'white') {
+
+    // --- VARIABLES -----------------------------------
+
+    $color-normal: transparentize($color, .5);
+    $color-active: $color;
+    
+    // --- STYLES --------------------------------------
+
+    width: 100%;
+    height: 100%;
+    padding: $padding-xl $padding-x;
+
+    // --- TITLE ---------------------------------------
+    
+    #title {
+        @include lkd-pgraph-small($color-normal);
+        display: block;
+        padding-bottom: $padding-l;
+        text-transform: uppercase;
+
+        &:active,
+        &.active {
+            color: $color-active;
+        }
+    }
+
+    // --- ITEMS ------------------------------------
+    
+    a {
+        @include lkd-pgraph($color-normal);
+        display: block;
+        padding: $padding 0;
+        text-transform: capitalize;
+
+        &:active,
+        &.active {
+            color: $color-active;
+        }
+    }
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-sidebar-generator($color: $text-color) {
+    .lkd-sidebar {
+        @include lkd-sidebar($color);
+    }
+}

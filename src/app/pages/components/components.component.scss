@@ -1,0 +1,33 @@
+@import '../../../styles/lkd-commons';
+
+main {
+    @include lkd-flex($aln: stretch);
+    padding-top: 60px;
+
+    // --- SIDEBAR -----------------------------------
+    
+    .sidebar-box {
+        z-index: 0;
+        width: 15%;
+        background: $clr-wht;
+        border: 1px solid $clr-gry;
+    }
+    
+    // --- VIEWS --------------------------------------
+    
+    .views-box {
+        display: inline-block;
+        width: 85%;
+        height: 100%;
+        min-height: 100vh;
+        background: lighten($clr-lgt, 10%);
+    
+        .views-header {
+            padding: $padding-xl;
+    
+            h3 {
+                @include lkd-subtitle-slim($clr-ext);
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+// ----------------------------------------------
+// --- LKD PILL DIRECTIVE
+// ----------------------------------------------   
+
+// --- MIXIN ------------------------------------
+
+@mixin lkd-pill($color: $pill-color-default) {
+
+    $clr: color($color);
+
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: $corner-global;
+    border: 1px solid darken($clr, 10%);
+    background: $clr;
+    color: $clr-wht;
+    text-align: center;
+}
+
+// --- DEFAULT CLASS -----------------------------
+
+.lkd-pill {
+    @include lkd-pill();
+}
+
+// --- COLOR CLASSES GENERATOR -------------------
+
+@mixin lkd-pill-generator($colors) {
+    @each $color in $colors {
+        .lkd-pill {
+            &.#{$color} {
+                @include lkd-pill($color);
+            }
+        }
+    }
+}
+
+@include lkd-pill-generator($list-colors);

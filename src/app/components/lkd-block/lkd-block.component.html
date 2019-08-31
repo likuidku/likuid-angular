@@ -1,0 +1,25 @@
+<!-- <ng-template #content> -->
+    <div class="block-header">
+        <div class="title">
+            <ng-content select="[title]"></ng-content>
+        </div>
+        <div class="subtitle">
+            <ng-content select="[subtitle]"></ng-content>
+        </div>
+    </div>
+    <div class="text">
+        <ng-content select=[text]></ng-content>
+    </div>
+    <div class="body">
+        <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="footer">
+        <ng-content select="[footer]"></ng-content>
+    </div>
+<!-- </ng-template> -->
+
+<!-- <ng-container [ngTemplateOutlet]="content"></ng-container> -->
+
+
+
+

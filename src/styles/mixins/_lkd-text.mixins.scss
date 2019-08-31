@@ -1,0 +1,78 @@
+// --------------------------------------------------
+// --- TYPOGRAPHY MIXINS
+// --------------------------------------------------
+
+@mixin lkd-text($color: $text-color, $size: $text-base, $weight: $text-normal, $spacing: 0, $line: $line-height, $transform: none) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $line;
+    text-transform: $transform;
+} 
+
+// --- TITLES ---------------------------------------
+
+@mixin lkd-title($color: $text-color) {
+    @include lkd-text($color, $text-title, $transform: capitalize);
+}
+
+@mixin lkd-title-slim($color: $text-color) {
+    @include lkd-text($color, $text-title, $weight: $text-slim, $spacing: .8rem, $transform: capitalize);
+}
+
+@mixin lkd-title-small($color: $text-color) {
+    @include lkd-text($color, $size: $text-title-small, $spacing: 0);
+}
+
+@mixin lkd-title-block($color: $text-color) {
+    @include lkd-text($color, $size: $text-title-medium, $spacing: .25rem);
+}
+
+// --- SUBTITLES ------------------------------------
+
+
+@mixin lkd-subtitle($color: $text-color, $transform: uppercase) {
+    @include lkd-text($color, $text-subtitle, $spacing: $letter-spacing, $transform: $transform);
+}
+
+@mixin lkd-subtitle-slim($color: $text-color, $transform: uppercase) {
+    @include lkd-text($color, $size: $text-subtitle, $weight: $text-light, $spacing: .25rem, $transform: $transform);
+}
+
+@mixin lkd-subtitle-block($color: $text-color, $size: $text-title-small) {
+    @include lkd-text($color, $size, $weight: $text-light, $spacing: .25rem);
+}
+
+// --- PARAGRAPHS -----------------------------------
+
+@mixin lkd-pgraph($color: $text-color, $size: $text-base, $weight: $text-light, $align: left, $spacing: 0, $line: $line-height) {
+    @include lkd-text($color: $color, $size: $size, $weight: $weight, $spacing: $spacing, $line: $line);
+    text-align: $align;
+}
+
+@mixin lkd-pgraph-xsmall($color: $text-color) {
+    @include lkd-text($color, $size: $text-xsmall, $spacing: 0, $transform: uppercase);
+}
+
+@mixin lkd-pgraph-small($color: $text-color) {
+    @include lkd-text($color, $size: $text-small, $spacing: 0);
+}
+
+@mixin lkd-pgraph-block($color: $text-color) {
+    @include lkd-text($color, $size: $text-subtitle);
+}
+
+// --- COLOR CLASSES --------------------------------
+
+@mixin lkd-text-colors($colors) {
+    @each $color in $colors {
+        .txt-#{$color} {
+            color: color($color);
+        }
+    }
+}
+
+@if $enable-txt-color-attributes {
+    @include lkd-text-colors($list-colors);
+}

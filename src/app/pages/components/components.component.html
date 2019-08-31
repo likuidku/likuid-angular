@@ -1,0 +1,15 @@
+<main>
+    <div class="sidebar-box">
+        <lkd-sidebar></lkd-sidebar>
+    </div>
+    <div class="views-box">
+        <header class="views-header">
+            <h3>{{viewerService.viewTitle}}</h3>
+        </header>
+        <section class="views-body">
+            <lkd-viewer [labels]="viewerService.viewLabels">
+                <router-outlet></router-outlet>
+            </lkd-viewer>
+        </section>
+    </div>
+</main>

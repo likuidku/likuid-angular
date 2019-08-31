@@ -1,0 +1,99 @@
+@import '../../../styles/lkd-commons';
+
+.lkd-header {
+
+    position:               relative;
+    height:                 95vh;
+    background-image:       linear-gradient(to right bottom, transparentize($vyg-pry, .4), transparentize($vyg-sry, .4)), 
+                            url(../../../assets/images/templates/voyager/hero.jpg);
+    background-size:        cover;
+    background-position:    top;
+    clip-path:              polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.logo-box {
+
+    position:               absolute;
+    top:                    40px;
+    left:                   40px;
+    
+    logo {
+        height:             35px;
+    }
+}
+
+
+.catcheye {
+
+    @include lkd-flex($jus: center);
+    @include lkd-center(40%);  
+
+    .title {
+
+        @include lkd-text($clr-wht, 5rem, $text-normal, 40px, 1, uppercase);  
+
+        display:            block;
+        animation-name:     moveInLeftBounce;
+        animation-duration: 5s;
+    }
+    
+    .subtitle {
+
+        @include lkd-text($clr-wht, 2rem, $text-slim, 16.7px, 2, uppercase); 
+
+        display:            block;
+        margin-bottom:      50px;
+        animation-name:     moveInRightBounce;
+        animation-duration: 5s;
+    }
+
+    // --- BOTON VOYAGER CATCHEYE
+
+    .lkd-btn-vyg {
+
+        @include lkd-text($clr-gry, $transform: uppercase);
+
+        cursor:             pointer;
+        position:           relative;
+        display:            inline-block;
+        background:         $clr-wht;
+        padding:            15px 40px;
+        border-radius:      50px;
+        animation:          moveInBottom 5s;
+        animation-fill-mode: backwards;
+        transition:         $lkd-transition;
+
+        &::after {
+
+            content:        "";
+            z-index:        -1;
+            display:        inline-block;
+            position:       absolute;
+            top:            0;
+            left:           0;
+            width:          100%;
+            height:         100%;
+            border-radius:  50px;
+            background:     $clr-wht;
+            transition:     all .4s;
+        }
+        
+        &:hover {
+
+            transform:      translateY(-3px);
+            box-shadow:     0 10px 20px transparentize($clr-drk, .8);
+
+            &::after {
+                transform:  scale(1.6, 1.4);
+                opacity:    0;
+            }
+        }
+
+        &:active {
+            
+            transform:      translateY(-1px);
+            box-shadow:     0 10px 10px transparentize($clr-drk, .8);
+        }
+    }
+}
+

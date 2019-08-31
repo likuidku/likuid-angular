@@ -1,0 +1,74 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-navbar($color) {
+  // --- VARIABLES -----------------------------------
+
+  $gradient: lkd-gradient(darken($color, 5%));
+  $color-normal: transparentize($clr-wht, .5);
+  $color-active: $clr-wht;
+
+  // --- SELECTOR LIGHT ------------------------------
+
+  @if $enable-lkd-navbar-light-mode {
+    $gradient: lkd-gradient(lighten($color, 25%));
+    $color-normal: transparentize($clr-drk, .5);
+    $color-active: $clr-drk;
+  }
+  
+  // --- STYLES --------------------------------------
+
+  @include lkd-flex($jus: space-between);
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 60px;
+  padding: 0 $padding-xl;
+  background: $gradient;
+  box-shadow: $shadow-normal;
+  .left-box {
+    @include lkd-flex();
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    #logo {
+      @include lkd-subtitle-slim($color-normal, $transform: capitalize);
+      margin: 0 $margin;
+      transition: $lkd-transition;
+      &:hover,
+      &.active {
+        color: $color-active;
+      }
+    }
+    .buttons-box {
+      @include lkd-flex();
+      margin-left: $margin-l;
+      transition: $lkd-transition;
+      .nav-button {
+        @include lkd-text($color-normal, $transform: capitalize);
+        margin-right: $margin-n;
+        &:hover,
+        &.active {
+          color: $color-active;
+        }
+      }
+    }
+  }
+  .right-box img {
+    @include lkd-flex();
+  }
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-navbar-generator($colors) {
+  @each $color in $colors {
+    .lkd-navbar-#{$color} {
+      @include lkd-navbar(color($color));
+    }
+  }
+}

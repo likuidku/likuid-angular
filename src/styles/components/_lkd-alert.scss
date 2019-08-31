@@ -1,0 +1,113 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-alert($color) {
+
+    $clr: color($color);
+    $clr-title: $text-color;
+
+    .back {
+        @include lkd-flex($jus: center, $aln: center);
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: transparentize($clr-gry, .3);
+    }
+
+    @if $enable-lkd-alert-back-colors {
+        .back {
+            background: transparentize(darken($clr, 20%), .5);
+        }
+    }
+
+    @if $enable-lkd-alert-title-colors {
+        $clr-title: $clr;
+    }
+
+    .dialog {
+        @include lkd-flex(column);
+        position: relative;
+        max-width: 500px;
+        padding: 50px 30px;
+        border-radius: $corner-global;
+        border: 1px solid $clr;
+        background: $clr-wht;
+        box-shadow: 0 0 30px $clr-sdw;
+
+        .header {
+            text-align: center;
+
+            img,
+            lkd-alert-icon {
+                width: 80px;
+            }
+
+            h3,
+            lkd-alert-title {
+                @include lkd-text($color: $clr-title, $size: $text-title-medium, $weight: $text-bold, $spacing: 2px, $transform: capitalize);
+                display: block;
+                margin: 25px 0;
+            }
+        }
+        .body {
+            width: 100%;
+            margin: 0 0 25px 0;
+            padding: 0 10px;
+            text-align: center;
+
+            p,
+            lkd-alert-message {
+                margin: 0 0 25px 0;
+                @include lkd-text($size: $text-subtitle, $weight: $text-slim, $spacing: 1);
+            }
+
+            input,
+            lkd-input {
+                @include lkd-pgraph();
+                display: block;
+                padding: 10px 3px;
+                margin: 20px 0;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $clr-drk;
+                background: none;
+            }
+        }
+        .buttons {
+            button,
+            lkd-btn {
+                margin: 0 10px;
+            }
+            lkd-btn {
+                @include lkd-btn($color);
+            }
+        }
+        .link {
+            margin-top: 25px;
+            padding: 0 10px;
+            a,
+            lkd-alert-link {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-alert-generator($colors) {
+    @each $color in $colors {
+        lkd-alert {
+            &.#{$color} {
+                @include lkd-alert($color);
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div class="lkd-sidebar">
+  <a  id="title" [routerLink]="['/components', config.title.link]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
+    {{config.title.text}}
+  </a>
+  <div class="sidebar-items">
+    <ul>
+      <li *ngFor="let item of config.items">
+        <a  [routerLink]="['/components', item]"
+            routerLinkActive="active">
+          {{item}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+// --------------------------------------------------
+// --- FLEX
+// --------------------------------------------------
+
+@mixin lkd-flex($dir: row, $jus: flex-start, $aln: center, $wrap: wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $aln;
+  flex-wrap: $wrap;
+}
+
+// ----------------------------------------------
+// --- POSITION
+// ---------------------------------------------- 
+
+@mixin lkd-center($top: 50%, $left: 50%, $x: -50%, $y: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($x, $y);
+}

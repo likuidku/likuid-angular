@@ -1,0 +1,35 @@
+
+@mixin lkd-block() {
+
+    .block-header {
+
+        .title {
+            h2 {
+                @include lkd-title-block();
+                padding: 10px 20px;
+                border-bottom: 1px solid $clr-lgt;
+            }
+        }
+
+        .subtitle {
+            margin: 10px 0;
+            padding: 10px 20px;
+            h3 {
+                @include lkd-subtitle-slim();
+            }
+        }
+
+    }
+    .text {
+        margin: 30px 0;
+        p {
+            @include lkd-pgraph($align: justify, $line: 2);
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+    }
+}
+
+lkd-block {
+    @include lkd-block();
+}

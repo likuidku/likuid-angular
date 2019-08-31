@@ -1,0 +1,68 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-footer($color) {
+
+    // --- VARIABLES ---------------------------------
+
+    $background: darken($color, 10%);
+    $color-text: $text-color-inverse;
+    $color-link: $clr-pry;
+
+    // --- SELECTOR ----------------------------------
+
+    @if $enable-lkd-footer-light-mode {
+        $background: transparentize($color, .9);
+        $color-text: $text-color;
+    }
+
+    // --- STYLES ------------------------------------
+
+    @include lkd-flex($jus: space-between);
+    z-index: 100;
+    padding: $padding-xl;
+    background: $background;
+    .footer-text {
+        @include lkd-flex(column, $aln: flex-start);
+        width: 60%;
+        p {
+            @include lkd-pgraph-small($color-text);
+            margin-bottom: $margin-s;
+            a {
+                color: $color-link;
+            }
+        }
+        .icon-link a {
+            @include lkd-flex();
+            @include lkd-pgraph($color-link);
+            img {
+                width: 50px;
+                margin-right: $margin-n;
+            }
+        }
+    }
+    .footer-logo {
+        @include lkd-flex($jus: flex-end);
+        width: 40%;
+        img {
+            width: 80px;
+            margin-right: $margin-n;
+        }
+        h1 {
+            @include lkd-subtitle-slim($color-text);
+        }
+    }
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-footer-generator($colors) {
+    @each $color in $colors {
+        .lkd-footer-#{$color} {
+            @include lkd-footer(color($color));
+        }
+    }
+}

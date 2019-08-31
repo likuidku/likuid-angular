@@ -1,0 +1,78 @@
+@import '../../../styles/lkd-commons';
+
+// --------------------------------------------------
+// --- HEADER
+// --------------------------------------------------
+
+header {
+    @include lkd-flex($jus: center, $aln: flex-start);
+    width: 100vw;
+    height: 55vh;
+    padding-top: 100px;
+    background: $clr-pry;
+    // --- IMAGE ------------------------------------   
+    img {
+        width: 300px;
+        margin-right: $margin-l;
+    }
+    // --- TEXT -------------------------------------
+    .catch-eye {
+        @include lkd-flex(column, center, flex-start);
+        height: 400px;
+        // --- Main title
+        h1 {
+            @include lkd-text($clr-wht, 3rem, $text-slim, 20px, $transform: uppercase);
+            margin-bottom: $margin-n;
+        }
+        // --- Subtitle    
+        h2 {
+            @include lkd-subtitle-slim($clr-wht);
+            margin-bottom: $margin-l;
+        }
+    }
+}
+
+// --------------------------------------------------
+// --- SECTIOMN
+// --------------------------------------------------
+
+section {
+    @include lkd-flex($jus: space-between);
+    width: 100%;
+    max-width: 1300px;
+    height: 45vh;
+    margin: 0 auto;
+    padding: $padding-xl $padding-l $padding-x;
+    // --- Divs 
+    div {
+        @include lkd-flex(column, flex-start, flex-start);
+        width: 30%;
+        min-width: 350px;
+        height: 100%;
+        padding: 0 $padding-x;
+        // --- icon       
+        img {
+            height: 70px;
+            margin-bottom: $margin-n;
+        }
+        // --- title
+        h3 {
+            @include lkd-subtitle-slim($clr-ext, capitalize);
+            margin-bottom: $margin;
+        }
+        // --- subtitle
+        p {
+            @include lkd-pgraph($clr-ext);
+            margin-bottom: $margin-n;
+        }
+        // --- texts
+        small {
+            @include lkd-pgraph-small();
+            margin-bottom: $margin;
+        }
+        // --- button
+        a {
+            margin-top: $margin;
+        } 
+    }
+}

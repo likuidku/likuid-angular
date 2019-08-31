@@ -1,0 +1,65 @@
+// ----------------------------------------------
+// --- ANIMATIONS
+// ----------------------------------------------
+
+// ----------------------------------------------
+// --- X TRANSLATES
+// ----------------------------------------------
+
+@keyframes moveInLeftBounce {
+    from {
+        opacity:        0;
+        transform:      translateX(-80%);
+    }
+    10% {
+        opacity: .7;
+        transform:      translateX(-10%);
+    }
+    97% {
+        transform:      translateX(3%);
+    }
+    to {
+        opacity: 1;
+        transform:      translateX(0);
+    }
+}
+
+@keyframes moveInRightBounce {
+    from {
+        opacity:        0;
+        transform:      translateX(80%);
+    }
+    10% {
+        opacity: .7;
+        transform:      translateX(10%);
+    }
+    97% {
+        transform:      translateX(-3%);
+    }
+    to {
+        opacity: 1;
+        transform:      translateX(0);
+    }
+}
+
+// ------------------------------------------
+// --- Y TRANSLATES
+// ------------------------------------------
+
+@keyframes moveInBottom {
+    from {
+        opacity:        0;
+        transform:      translateY(100%);
+    }
+    10% {
+        opacity: .7;
+        transform:      translateY(10%);
+    }
+    97% {
+        transform:      translateY(-5%);
+    }
+    to {
+        opacity: 1;
+        transform:      translateY(0);
+    }
+}

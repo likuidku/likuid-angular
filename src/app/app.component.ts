@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+// --- SERVICES ---------------------------------
+import { ComponentsDataService } from './services/components-data.service';
 
 @Component({
   selector: 'lkd-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<lkd-navbar [config]="componentsData.navBarMain"></lkd-navbar>
+            <router-outlet></router-outlet>
+            <lkd-footer [config]="componentsData.footerMain"></lkd-footer>`,
 })
 export class AppComponent {
-  title = 'lkd-angular';
+
+  constructor( private componentsData: ComponentsDataService ) {}
+
 }

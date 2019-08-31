@@ -1,0 +1,49 @@
+// --------------------------------------------------
+// --- IMPORT COMPONENTS
+// --------------------------------------------------
+
+@import './components/lkd-navbar';
+@import './components/lkd-footer';
+@import './components/lkd-button';
+@import './components/lkd-sidebar';
+@import './components/lkd-viewer';
+@import './components/lkd-alert';
+@import './components/lkd-block';
+
+// --------------------------------------------------
+// --- GENERATORS
+// --------------------------------------------------
+
+// --- NAVBAR ---------------------------------------
+
+@include lkd-navbar-generator($list-colors);
+
+// --- FOOTER ---------------------------------------
+
+@include lkd-footer-generator($list-colors);
+
+// --- LKD BTN -------------------------------------
+
+// --- CLASSES -------------------------------------
+
+@if $enable-lkd-btn-classes {
+@include lkd-btn-generator-class($lkd-btn-colors, $lkd-btn-types);
+}
+
+// --- ATTRIBUTES ----------------------------------
+
+@if $enable-lkd-btn-attributes {
+@include lkd-btn-generator-attr($lkd-btn-colors, $lkd-btn-types);
+}
+
+// --- SIDEBAR -------------------------------------
+
+@include lkd-sidebar-generator($color: $lkd-sidebar-text);
+
+// --- LKD VIEWER ----------------------------------
+
+@include lkd-viewer-generator($list-colors);
+
+// --- LKD ALERT -----------------------------------
+
+@include lkd-alert-generator($list-colors);

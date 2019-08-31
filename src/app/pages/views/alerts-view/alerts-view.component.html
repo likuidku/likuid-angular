@@ -1,0 +1,101 @@
+<!-------------------------------------------
+------- OVERVIEW
+--------------------------------------------->
+
+<div class="overview" *ngIf="showView === 'overview'">
+  <lkd-block>
+    <h2 title>lkd-alert</h2>
+    <lkd-pill subtitle inf>Component</lkd-pill>
+    <p text>Las alertas y ventanas de diálogo proporcionan una interacción con el usuario enmaracada en un contexto. Admiten aceptar o cancelar el mensaje y tienen la capacidad de recibir información a través de inputs. A su vez emiten eventos indicando la acción que ha ejecutado el usuario.</p>
+  </lkd-block>
+</div>
+
+<!-------------------------------------------
+------- SASS VIEW
+--------------------------------------------->
+
+<div class="sass" *ngIf="showView === 'sass'">sass comming soon</div>
+
+<!-------------------------------------------
+------- API VIEW
+--------------------------------------------->
+
+<div class="API" *ngIf="showView === 'api'">
+  <lkd-block>
+    <h2 title>lkd-alert</h2>
+    <lkd-pill subtitle inf>Component</lkd-pill>
+    <p text>Las alertas y ventanas de diálogo proporcionan una interacción con el usuario enmaracada en un contexto. Admiten aceptar o cancelar el mensaje y tienen la capacidad de recibir información a través de inputs. A su vez emiten eventos indicando la acción que ha ejecutado el usuario.</p>
+  </lkd-block>
+  <lkd-block>
+    <h2 title>Alert</h2>
+    <lkd-pill subtitle sry>Interface</lkd-pill>
+    <p text>Provee la interface para la construcción del componente a traves de su propiedad [config].</p>
+  </lkd-block>
+  <lkd-block>
+    <h2 title>AlertService</h2>
+    <lkd-pill subtitle pry>Service</lkd-pill>
+    <p text>Provee la lógica de comunicación con el componente.</p>
+  </lkd-block>
+</div>
+
+<!-------------------------------------------
+------- EXAMPLES VIEW
+--------------------------------------------->
+
+<div class="examples" *ngIf="showView === 'examples'">
+  <h3>Alerts</h3>
+  <div class="alert">
+    <lkd-alert pry #pry [config]="dataService.alertConfig"></lkd-alert>
+    <lkd-btn pry (click)="pry.showAlert()">Show Primary</lkd-btn>
+
+    <lkd-alert sry #sry>
+      <img icon src="../../../../assets/icons/diamond.svg" alt="">
+      <h3 title>Contenido En Alert</h3>
+      <p message>Mensaje generado en la alerta</p>
+      <input inputs type="text" placeholder="usuario">
+      <input inputs type="text" placeholder="password">
+      <lkd-btn button dgr flat (click)="sry.dismissAlert()">Cancelar</lkd-btn>
+      <lkd-btn button sry flat (click)="sry.okAlert()">Entrar</lkd-btn>
+      <a lkd-btn sry link href="#">Ha olvidado la contraseña?</a>
+    </lkd-alert>
+    <lkd-btn sry (click)="sry.showAlert()">Show Secondary</lkd-btn>
+
+    <lkd-alert inf #inf>
+      <h3 title>internet?</h3>
+      <p message>realmente esa cosa no sirve absolutamente para nada, con lo bien que estabamos</p>
+      <lkd-btn button inf lkd (click)="inf.okAlert()">be likuid again!</lkd-btn>
+    </lkd-alert>
+    <lkd-btn inf (click)="inf.showAlert()">Show Info</lkd-btn>
+
+    <lkd-alert scs #scs [config]="dataService.alertConfigSimple"></lkd-alert>
+    <lkd-btn scs (click)="scs.showAlert()">Show Success</lkd-btn>
+
+    <lkd-alert alr #alr>
+        <h3 title>Aaaaaaaahhhhh!</h3>
+        <lkd-btn alr flat (click)="alr.okAlert()">be likuid again!</lkd-btn>
+    </lkd-alert>
+    <lkd-btn alr (click)="alr.showAlert()">Show Alert</lkd-btn>
+
+    <lkd-alert dgr #dgr [config]="dataService.alertConfigNormal"></lkd-alert>
+    <lkd-btn dgr (click)="dgr.showAlert()">Show Danger</lkd-btn>
+
+    <lkd-alert drk #drk>
+        <img icon src="../../../../assets/icons/diamond.svg" alt="">
+        <lkd-alert-title>Contenido En Alert</lkd-alert-title>
+        <lkd-alert-message>Mensaje generado en la alerta</lkd-alert-message>
+        <input inputs type="text" placeholder="usuario">
+        <input inputs type="text" placeholder="password">
+        <lkd-btn dgr flat (click)="drk.dismissAlert()">Cancelar</lkd-btn>
+        <lkd-btn drk flat (click)="drk.okAlert()">Entrar</lkd-btn>
+        <lkd-alert-link lkd-btn drk href="#">Ha olvidado la contraseña?</lkd-alert-link>
+    </lkd-alert>
+    <lkd-btn drk (click)="drk.showAlert()">Show Dark</lkd-btn>
+
+    <lkd-alert ext #ext>
+      <lkd-alert-title>Envío Realizado</lkd-alert-title>
+      <lkd-alert-message>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolor nulla vel perspiciatis officia, voluptas reprehenderit ipsum earum, consequuntur, veritatis doloremque eius magnam dolores numquam aperiam nemo et? Veritatis pariatur dolorum perferendis modi tempora aperiam quos possimus natus temporibus, unde voluptas distinctio debitis praesentium non eligendi ipsa suscipit voluptatum. Officiis odio illum molestiae labore doloremque ab quas, voluptatem voluptatum totam aliquid numquam dolorum iure dolores quam? Itaque quae illo rem provident dolorum optio praesentium, vel, dolores eaque ipsa veniam incidunt? Magnam inventore beatae, blanditiis nam quas, corporis non ipsum sunt possimus eum soluta, voluptas odio deserunt optio culpa? Accusantium, illum.</lkd-alert-message>
+      <lkd-btn scs solid (click)="ext.okAlert()">Ok</lkd-btn>
+    </lkd-alert>
+    <lkd-btn ext (click)="ext.showAlert()">Show Extra</lkd-btn>
+  </div>
+</div>

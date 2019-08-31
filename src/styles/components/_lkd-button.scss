@@ -1,0 +1,298 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-btn($clr: $lkd-btn-default-color, $type: $lkd-btn-default-type) {
+    
+    // --- LOCAL VARIABLES --------------------------
+    
+    $color:                     color($clr);
+    $size:                      $lkd-btn-size;
+    $back:                      $lkd-btn-back;
+    $border:                    $lkd-btn-border $lkd-btn-border-line $color;
+    $border-lgt:                $lkd-btn-border $lkd-btn-border-line $back;
+    $border-off:                $lkd-btn-border $lkd-btn-border-line $clr-lgt;
+    $behavior:                  $lkd-btn-behavior;
+
+    // --- DEPTH SHADOWS -----------------------------
+    
+    $sdw-n:                     $lkd-btn-shadow-n;
+    $sdw-h:                     $lkd-btn-shadow-h;
+    $sdw-a:                     $lkd-btn-shadow-a;
+
+    // --- DEPTH BEHVIOR -----------------------------
+
+    $normal-state:              $depth-normal;
+    $hover-state:               $depth-hover;
+    $active-state:              $depth-active;
+
+    // --- SIZE SELECTOR -----------------------------
+
+    @if $enable-lkd-btn-size-fixed == false {
+        $size: auto;
+    }
+
+    // --- DEPTH SELECTOR ----------------------------
+
+    @if $enable-flat-mode {
+        $sdw-n:                     none;
+        $sdw-h:                     none;
+        $sdw-a:                     none;
+    }
+    
+    // --- STYLES ------------------------------------
+    display: inline-block;
+    cursor: pointer;
+    width: $size;
+    padding: $lkd-btn-pad-y $lkd-btn-pad-x;
+    border-radius: $lkd-btn-corner;
+    background: transparentize($back, .9);
+    border: $border;
+
+    // --- TYPO --------------------------------------
+
+    color: $color;
+    font-size: $lkd-btn-text;
+    text-align: $lkd-btn-align;
+
+    // --- DEPTH -------------------------------------
+
+    box-shadow: none;
+    
+    // --- BEHAVIOR ----------------------------------
+    
+    transition: $behavior;
+
+    // --- HOVER -------------------------------------
+    
+    &:hover {
+        $text: $back;
+        background: $color;
+        color: $text;
+        transform: $hover-state;
+        box-shadow: none;
+    }
+
+    // --- ACTIVE ------------------------------------
+    
+    &:active,
+    &.lkd-on {
+        background: $color;
+        transform: $active-state;
+        box-shadow: none;
+        color: $clr-wht;
+    }
+
+    // --- WHITE SPECIAL CASE ------------------------
+
+    @if $clr == 'white' {
+
+        &:hover {
+            background: transparentize($color, .7);
+        }
+
+        &:active {
+            color: $clr-drk;
+            border: 1px solid $clr-drk;
+            background: transparentize($color, .7);
+        }
+    }
+
+    // --- DISABLED ----------------------------------
+    
+    &.lkd-off,
+    &.lkd-off:hover,
+    &.lkd-off:active {
+        cursor: default;
+        color: $back;
+        border: $border-off;
+        background: lighten($clr-gry, 20%);
+        box-shadow: none;
+        transform: none;
+    }
+
+    // --- FLAT SELECTOR -----------------------------
+    
+    @if $type == 'flat' {
+
+        background: $color;
+        color: $back;
+        transition: $behavior;
+
+        &:hover {
+            background: darken($color, 10%);
+            box-shadow: none;
+        }
+
+        &:active,
+        &.lkd-on {
+            background: $clr-wht;
+            color: darken($color, 10%);
+        }
+    }
+
+    // --- SOLID SELECTOR ----------------------------
+
+    @if $type == 'solid' {
+        
+        box-shadow: $sdw-n;
+
+        &:hover {
+            box-shadow: $sdw-h;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+        &.lkd-on {
+            box-shadow: $sdw-a;
+            background: $clr-wht;
+            color: $color;
+        }
+    }
+
+    // --- FILLED SELECTOR ---------------------------
+
+    @if $type == 'filled' {
+        
+        border: $border-lgt;
+        background: $color;
+        box-shadow: $sdw-n;
+        color: $back;
+
+        &:hover {
+            box-shadow: $sdw-h;
+            background: darken($color, 10%);
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+        &.lkd-on {
+            box-shadow: $sdw-a;
+            background: $color;
+        }
+    }
+
+    // --- LKD SELECTOR ------------------------------
+
+    @if $type == 'lkd' {
+        
+        border: $border-lgt;
+        background: lkd-gradient($color);
+        box-shadow: $sdw-n;
+        color: $back;
+
+        &:hover {
+            box-shadow: $sdw-h;
+            background: lkd-gradient(darken($color, 5%));
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+
+        &.lkd-on {
+            box-shadow: $sdw-a;
+            background: lkd-gradient($color);
+        }
+    }
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+// --- DEFAULT --------------------------------------
+
+.lkd-btn {
+    @include lkd-btn();
+}
+
+// --------------------------------------------------
+// --- CLASSES GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-btn-generator-class($colors, $types) {
+
+    // --- DEFAULT  ---------------------------------
+
+    @each $color in $colors {
+
+        // --- GENERATE ONLY COLORS WITH GLOBAL STYLE ---
+
+        @if $enable-lkd-btn-global-style {
+            .lkd-btn-#{$color} {
+                @include lkd-btn($color, $global-style);
+            }
+        }
+
+        // --- GENERATE ALL COLORS WITH ALL STYLES ------
+    
+        @else {
+
+            // --- DEFAULT STYLE ------------------------
+            
+            .lkd-btn-#{$color} {
+                @include lkd-btn($color);
+            }
+
+            // --- ALL STYLES ----------------------------
+            
+            @each $type in $types {
+                .lkd-btn-#{$color}-#{$type} {
+                    @include lkd-btn($color, $type);
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------
+// --- ATTRIBUTES GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-btn-generator-attr($colors, $types) { 
+    
+    
+    @each $color in $colors {
+        
+        // --- GENERATE ONLY COLORS WITH GLOBAL STYLE ---
+
+        @if $enable-lkd-btn-global-style {
+            .lkd-btn {
+                &.#{$color} {
+                    @include lkd-btn($color, $global-style);
+                }
+            }
+        }
+
+        /// --- GENERATE ALL COLORS IN ALL STYLES --------
+        
+        @else {
+
+            // --- DEFAULT STYLE ------------------------
+
+            .lkd-btn {
+                &.#{$color} {
+                    @include lkd-btn($color);
+                }
+            }
+
+            // --- ALL STYLES ----------------------------
+
+            .lkd-btn {
+                &.#{$color} {
+                    @each $type in $types {
+                        &.#{$type} {
+                            @include lkd-btn($color, $type);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

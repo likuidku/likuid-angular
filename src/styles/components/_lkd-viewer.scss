@@ -1,0 +1,87 @@
+// --------------------------------------------------
+// --- MIXIN
+// --------------------------------------------------
+
+@mixin lkd-viewer($border: $lkd-viewer-color) {
+
+    // --- VARIABLES --------------------------------
+    
+    $text-active:               $lkd-viewer-text-active;
+    $text-pasive:               $lkd-viewer-text-pasive;
+    $back:                      lighten($clr-wht, 10%);
+
+    // --- SELECTORS --------------------------------
+
+    // --- TEXT UNSELECTED
+    
+    @if $enable-lkd-viewer-text-colors {
+        $text-pasive:           $border;
+    }
+
+    // --- BACKGROUND
+
+    @if $enable-lkd-viewer-back {
+        $back:                  $lkd-viewer-background;
+    }
+    
+    .view-labels {
+        @include lkd-flex($jus: left);
+        padding-left: $padding-x;
+        border-bottom: 1px solid $clr-gry;
+
+        lkd-view {
+            cursor: pointer;
+            @include lkd-pgraph($text-pasive);
+            display: inline-block;
+            padding: $padding-l $padding-x;
+            border-top: 2px solid transparent;
+            border-left: $lkd-viewer-border-pasive;
+            border-right: $lkd-viewer-border-pasive;
+            border-radius: $corner-global $corner-global 0 0;
+            text-transform: capitalize;
+            transition: .8s $lkd-bezier;
+            transform: translateY(1px);
+            &.active {
+                border-top: 2px solid $border;
+                border-left: $lkd-viewer-border;
+                border-right: $lkd-viewer-border;
+                background: $back;
+                color: $text-active;
+            }
+        }
+    }
+    
+    .view-content {
+        padding: $padding-xx $padding-x;
+        background: $back;
+    
+    }
+    
+}
+
+// --------------------------------------------------
+// --- GENERATOR
+// --------------------------------------------------
+
+@mixin lkd-viewer-generator($borders) {
+    
+    // --- DEFAULT BORDER ----------------------------
+    
+    lkd-viewer {
+        @include lkd-viewer();
+    }
+
+    // --- ALL BORDER COLORS -------------------------
+    
+    @if $enable-lkd-viewer-colors {
+        @each $border in $borders {
+            lkd-viewer {
+                &.#{$border} {
+                    @include lkd-viewer(color($border));
+                }
+            }
+        }
+    }
+}
+
+

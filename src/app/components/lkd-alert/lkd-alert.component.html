@@ -1,0 +1,60 @@
+<ng-template #alertConfigType>
+    <div class="back" *ngIf="visible">
+        <div class="dialog">
+            <div class="header">
+                <img *ngIf="config.icon" src="../../../assets/icons/{{config.icon}}" alt="">
+                <h3>{{config.title}}</h3>
+            </div>
+            <div class="body" *ngIf="config.message || config.labels">
+                <p>{{config.message}}</p>
+                <input *ngFor="let input of config.labels, let i = index" placeholder="{{input}}" type="text">
+            </div>
+            <div class="footer">
+                <div class="buttons">
+                    <button lkd-btn dgr (click)="dismissAlert()" *ngIf="config.dismiss">{{config.dismiss}}</button>
+                    <lkd-btn (click)="okAlert()">{{config.accept}}</lkd-btn>
+                </div>
+                <div class="link" *ngIf="config.link">
+                    <a lkd-btn inf href="{{config.link.link}}" (click)="linkAlert()">{{config.link.text}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #alertContentType>
+    <div class="back" *ngIf="visible">
+        <div class="dialog">
+            <div class="header">
+                <ng-content select="[icon]"></ng-content>
+                <ng-content select="lkd-alert-icon"></ng-content>
+                <ng-content select="[title]"></ng-content>
+                <ng-content select="lkd-alert-title"></ng-content>
+            </div>
+            <div class="body">
+                <ng-content select="[message]"></ng-content>
+                <ng-content select="lkd-alert-message"></ng-content>
+                <ng-content select="[inputs]"></ng-content>
+                <ng-content select="input"></ng-content>
+                <ng-content select="lkd-input"></ng-content>
+                <ng-content select="lkd-alert-input"></ng-content>
+            </div>
+            <div class="footer">
+                <div class="buttons">
+                    <ng-content select="[button]"></ng-content>
+                    <ng-content select="lkd-btn"></ng-content>
+                </div>
+                <div class="link">
+                    <ng-content select="[link]"></ng-content>
+                    <ng-content select="a"></ng-content>
+                    <ng-content select="lkd-alert-link"></ng-content>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+
+<ng-container [ngTemplateOutlet]="alertConfigType" *ngIf="config"></ng-container>
+<ng-container [ngTemplateOutlet]="alertContentType" *ngIf="!config"></ng-container>

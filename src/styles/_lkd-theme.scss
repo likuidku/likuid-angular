@@ -1,0 +1,105 @@
+// ----------------------------------------------
+// --- THEMES
+// ----------------------------------------------
+
+$theme-colors-vivid: (
+    'primary': #6950c4,
+    'secondary': #06b5b5,
+    'info': #06b5b5,
+    'success': #a4d602,
+    'alert': #fc9f1b,
+    'danger': #f42642,
+    'dark': #344b65,
+    'light': #dcdcdc,
+    'white': #fcfcfc,
+    'gray': #aeaeae,
+    'shadow': #000000,
+    'extra': #dd39ac,
+);
+
+$theme-colors-likuid: (
+    'primary': #fc9f1b,
+    'secondary': #06b5b5,
+    'info': #007bff,
+    'success': #26881d,
+    'alert': #ff6f00,
+    'danger': #e80d0d,
+    'dark': #353535,
+    'light': #dcdcdc,
+    'white': #fcfcfc,
+    'gray': #aeaeae,
+    'shadow': #000000,
+    'extra': #685000,
+);
+
+// ---------------------------------------------
+// --- THEME SELECTOR
+// ---------------------------------------------
+
+$theme-active: $theme-colors-likuid;
+
+// ---------------------------------------------
+// --- COLORS EXTRATOR
+// ---------------------------------------------
+
+$clr-pry: map-get($theme-active, 'primary');
+$clr-sry: map-get($theme-active, 'secondary');
+$clr-inf: map-get($theme-active, 'info');
+$clr-scs: map-get($theme-active, 'success');
+$clr-alr: map-get($theme-active, 'alert');
+$clr-dgr: map-get($theme-active, 'danger');
+$clr-ext: map-get($theme-active, 'extra');
+$clr-gry: map-get($theme-active, 'gray');
+$clr-sdw: map-get($theme-active, 'shadow');
+$clr-drk: map-get($theme-active, 'dark');
+$clr-wht: map-get($theme-active, 'white');
+$clr-lgt: map-get($theme-active, 'light');
+
+// ----------------------------------------------
+// --- LIST COLORS
+// ----------------------------------------------
+
+$list-colors: 'primary' 'secondary' 'info' 'success' 'alert' 'danger' 'extra' 'white' 'dark';
+
+// ----------------------------------------------
+// --- TEMPLATES COLORS
+// ----------------------------------------------
+
+// ----------------------------------------------
+// --- VOYAGER
+// ----------------------------------------------
+
+$theme-colors-voyager: (
+    'primary': #7ed56f,
+    'secondary': #28b485,
+    'info': #007bff,
+    'success': #26881d,
+    'alert': #ff6f00,
+    'danger': #e80d0d,
+    'dark': #353535,
+    'light': #dcdcdc,
+    'white': #fcfcfc,
+    'gray': #aeaeae,
+    'shadow': #000000,
+    'extra': #685000,
+);
+
+// ---------------------------------------------
+// --- COLORS EXTRATOR
+// ---------------------------------------------
+
+$vyg-pry: map-get($theme-colors-voyager, 'primary');
+$vyg-sry: map-get($theme-colors-voyager, 'secondary');
+$vyg-inf: map-get($theme-colors-voyager, 'info');
+$vyg-scs: map-get($theme-colors-voyager, 'success');
+$vyg-alr: map-get($theme-colors-voyager, 'alert');
+$vyg-dgr: map-get($theme-colors-voyager, 'danger');
+$vyg-ext: map-get($theme-colors-voyager, 'extra');
+$vyg-gry: map-get($theme-colors-voyager, 'gray');
+$vyg-sdw: map-get($theme-colors-voyager, 'shadow');
+$vyg-drk: map-get($theme-colors-voyager, 'dark');
+$vyg-wht: map-get($theme-colors-voyager, 'white');
+$vyg-lgt: map-get($theme-colors-voyager, 'light');
+
+
+
