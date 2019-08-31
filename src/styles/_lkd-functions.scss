@@ -3,11 +3,13 @@
 // --------------------------------------------------
 
 @function lkd-gradient($color) {
+
     $gradient: linear-gradient(45deg, darken($color, 10%), $color);
     @return $gradient;
 }
 
 @function lkd-link($color, $state: 'noactive') {
+
     $link: transparentize($color, .5);
     @if $state == active {
         $link: $color;
@@ -20,6 +22,7 @@
 // ----------------------------------------------
 
 @function color($color) {
+
     $get-color: map-get($theme-active, $color);
     @return $get-color;
 }

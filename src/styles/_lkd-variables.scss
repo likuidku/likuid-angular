@@ -2,15 +2,15 @@
 // --- FONT
 // ----------------------------------------------
 
-$font-name: 'Roboto';
-@import url('https://fonts.googleapis.com/css?family=#{$font-name}:100,300,400,700&display=swap');
-$font: #{$font-name}, sans-serif;
+$font-name:                             'Roboto';
+@import                                 url('https://fonts.googleapis.com/css?family=#{$font-name}:100,300,400,700&display=swap');
+$font:                                  #{$font-name}, sans-serif;
 
 // ----------------------------------------------
 // --- THEME
 // ----------------------------------------------
 
-@import './lkd-theme';
+@import                                 './lkd-theme';
 
 // ----------------------------------------------
 // --- SWITCHERS
@@ -52,13 +52,13 @@ $enable-lkd-alert-title-colors:         true;
 // --- GLOBAL TYPES
 // ----------------------------------------------
 
-$global-flat:                   'flat';
-$global-basic:                  'basic';
-$global-solid:                  'solid';
-$global-filled:                 'filled';
-$global-lkd:                    'lkd';
+$global-flat:                           'flat';
+$global-basic:                          'basic';
+$global-solid:                          'solid';
+$global-filled:                         'filled';
+$global-lkd:                            'lkd';
 
-$global-style:                   $global-lkd;
+$global-style:                          $global-lkd;
 
 // ----------------------------------------------
 // --- BOX STYLES
@@ -66,180 +66,184 @@ $global-style:                   $global-lkd;
 
 // --- MARGIN -----------------------------------
 
-$margin:                    1rem;
-$margin-s:                  $margin * .25;
-$margin-n:                  $margin * 2;
-$margin-m:                  $margin * 3;
-$margin-l:                  $margin * 6;
-$margin-b:                  $margin * 10;
-$margin-x:                  $margin * 12;   
-$margin-xx:                 $margin * 15;   
+$margin:                                1rem;
+
+$margin-s:                              $margin * .25;
+$margin-n:                              $margin * 2;
+$margin-m:                              $margin * 3;
+$margin-l:                              $margin * 6;
+$margin-b:                              $margin * 10;
+$margin-x:                              $margin * 12;   
+$margin-xx:                             $margin * 15;   
 
 // --- PADDING ----------------------------------
 
-$padding:                   .25rem;
-$padding-s:                 $padding * 2;
-$padding-m:                 $padding * 3;
-$padding-l:                 $padding * 4;
-$padding-b:                 $padding * 5;
-$padding-x:                 $padding * 6; 
-$padding-xl:                $padding * 12;
-$padding-xx:                $padding * 24;
+$padding:                               .25rem;
+
+$padding-s:                             $padding * 2;
+$padding-m:                             $padding * 3;
+$padding-l:                             $padding * 4;
+$padding-b:                             $padding * 5;
+$padding-x:                             $padding * 6; 
+$padding-xl:                            $padding * 12;
+$padding-xx:                            $padding * 24;
 
 // --- RADIUS -----------------------------------
 
-$rounded-full:                  100%;
-$rounded-half:                  5rem;
-$corner:                        .25rem;
-$corner-s:                      .2rem;
-$corner-l:                      .3rem;
-$corner-r:                      1rem;  
+$rounded-full:                          100%;
+$rounded-half:                          5rem;
+$corner:                                .25rem;
+$corner-s:                              .2rem;
+$corner-l:                              .3rem;
+$corner-r:                              1rem;  
 
-$corner-global:                 $corner-s;
+$corner-global:                         $corner-s;
 
 // --- BORDER -----------------------------------
 
-$border-weigth:                 .08rem;
-$border-line:                   solid;
+$border-weigth:                         .08rem;
+$border-line:                           solid;
 
 // --- SHADOWS ----------------------------------
 
-$shadow-normal:                 0 .06rem .25rem $clr-sdw;
-$shadow-hover:                  0 .03rem .15rem $clr-sdw;
-$shadow-active:                 inset $shadow-normal;
-$shadow-fly:                    0 1rem 2rem $clr-sdw;
+$shadow-normal:                         0 .06rem .25rem $clr-sdw;
+$shadow-hover:                          0 .03rem .15rem $clr-sdw;
+$shadow-active:                         inset $shadow-normal;
+$shadow-fly:                            0 1rem 2rem $clr-sdw;
 
 // --- BACKGROUNDS ------------------------------
 
-$back-wht:                      $clr-wht;
-$back-lgt:                      lighten($clr-lgt, 10%);
-$back-gry:                      $clr-gry;
-$back-dark:                     $clr-drk;
-$back-color:                    $clr-pry;
+$back-wht:                              $clr-wht;
+$back-lgt:                              lighten($clr-lgt, 10%);
+$back-gry:                              $clr-gry;
+$back-dark:                             $clr-drk;
+$back-color:                            $clr-pry;
 
 
 
 // --- DEPTH ------------------------------------
 
-$depth-base:                    1;
-$depth-far:                     scale($depth-base * .5);
-$depth-normal:                  scale($depth-base * 0);
-$depth-hover:                   scale($depth-base * .95);
-$depth-active:                  scale($depth-base * .9);
-$depth-near:                    scale($depth-base * 1.1);
-$depth-nariz:                   scale($depth-base * 2);
+$depth-base:                            1;
+
+$depth-far:                             scale($depth-base * .5);
+$depth-normal:                          scale($depth-base * 0);
+$depth-hover:                           scale($depth-base * .95);
+$depth-active:                          scale($depth-base * .9);
+$depth-near:                            scale($depth-base * 1.1);
+$depth-nariz:                           scale($depth-base * 2);
 
 // ----------------------------------------------
 // --- TYPOGRAPHY
 // ----------------------------------------------
 
-$text-color-lgt:                $clr-lgt;
-$text-color-drk:                $clr-drk;
-$text-color:                    $text-color-drk;
-$text-color-inverse:            $text-color-lgt;
-$text-unselect:                 $clr-gry;
-$text-select:                   $clr-ext;
+$text-color-lgt:                        $clr-lgt;
+$text-color-drk:                        $clr-drk;
+$text-color:                            $text-color-drk;
+$text-color-inverse:                    $text-color-lgt;
+$text-unselect:                         $clr-gry;
+$text-select:                           $clr-ext;
 
 // --- FONT SIZES -------------------------------
 
-$text-size:                     100%;
-$text-base:                     $text-size * 1; // Browser default usually (16px)
-$text-xsmall:                   $text-base * .5;
-$text-small:                    $text-base * .8;
-$text-subtitle:                 $text-base * 1.2;
-$text-title-small:              $text-base * 1.5;
-$text-title-medium:             $text-base * 2;
-$text-title:                    $text-base * 3;
-$text-big:                      $text-base * 3.5;
-$text-xbig:                     $text-base * 5;
+$text-size:                             100%;
+
+$text-base:                             $text-size * 1; // Browser default usually (16px)
+$text-xsmall:                           $text-base * .5;
+$text-small:                            $text-base * .8;
+$text-subtitle:                         $text-base * 1.2;
+$text-title-small:                      $text-base * 1.5;
+$text-title-medium:                     $text-base * 2;
+$text-title:                            $text-base * 3;
+$text-big:                              $text-base * 3.5;
+$text-xbig:                             $text-base * 5;
 
 // --- FONT WEIGHTS -----------------------------
 
-$text-slim:                     100;
-$text-light:                    300;
-$text-normal:                   400;
-$text-bold:                     700;
-$text-gordo:                    900;
+$text-slim:                             100;
+$text-light:                            300;
+$text-normal:                           400;
+$text-bold:                             700;
+$text-gordo:                            900;
 
 // --- SPACING ----------------------------------
 
-$letter-spacing:                1px;    
-$line-height:                   1.7;
+$letter-spacing:                        1px;    
+$line-height:                           1.7;
 
 // ----------------------------------------------
 // --- ANIMATIONS
 // ----------------------------------------------
 
-$lkd-ani-time:                  .2s;
-$lkd-bezier:                    cubic-bezier(.17,1.1,.01,.9);
-$lkd-time-curve:                $lkd-ani-time $lkd-bezier;
-$lkd-transition:                color $lkd-time-curve, 
-                                position $lkd-time-curve,
-                                width $lkd-time-curve,
-                                height $lkd-time-curve,
-                                padding $lkd-time-curve,
-                                transform  $lkd-time-curve,
-                                border $lkd-time-curve,
-                                border-top $lkd-time-curve,
-                                border-right $lkd-time-curve,
-                                border-bottom $lkd-time-curve,
-                                border-left $lkd-time-curve,
-                                border-radius $lkd-time-curve,
-                                box-shadow $lkd-time-curve,
-                                background-color $lkd-time-curve,
-                                background-image $lkd-time-curve,
-                                background-position $lkd-time-curve,
-                                background-size $lkd-time-curve,
-                                text-align $lkd-time-curve,
-                                font-size $lkd-time-curve,
-                                letter-spacing $lkd-time-curve,
-                                color $lkd-time-curve;
+$lkd-ani-time:                          .2s;
+$lkd-bezier:                            cubic-bezier(.17,1.1,.01,.9);
+$lkd-time-curve:                        $lkd-ani-time $lkd-bezier;
+$lkd-transition:                        color $lkd-time-curve, 
+                                        position $lkd-time-curve,
+                                        width $lkd-time-curve,
+                                        height $lkd-time-curve,
+                                        padding $lkd-time-curve,
+                                        transform  $lkd-time-curve,
+                                        border $lkd-time-curve,
+                                        border-top $lkd-time-curve,
+                                        border-right $lkd-time-curve,
+                                        border-bottom $lkd-time-curve,
+                                        border-left $lkd-time-curve,
+                                        border-radius $lkd-time-curve,
+                                        box-shadow $lkd-time-curve,
+                                        background-color $lkd-time-curve,
+                                        background-image $lkd-time-curve,
+                                        background-position $lkd-time-curve,
+                                        background-size $lkd-time-curve,
+                                        text-align $lkd-time-curve,
+                                        font-size $lkd-time-curve,
+                                        letter-spacing $lkd-time-curve,
+                                        color $lkd-time-curve;
 
 // --------------------------------------------------
 // --- LKD BUTTON
 // --------------------------------------------------
 
-$lkd-btn-pad-y:                 .5rem;
-$lkd-btn-pad-x:                 2rem;
-$lkd-btn-size:                  12rem;
-$lkd-btn-corner:                $corner;
-$lkd-btn-border:                $border-weigth;
-$lkd-btn-border-line:           $border-line;
-$lkd-btn-back:                  $clr-wht;
-$lkd-btn-behavior:              $lkd-transition;
-$lkd-btn-text:                  $text-base;
-$lkd-btn-align:                 center;
-$lkd-btn-shadow-n:              $shadow-normal;
-$lkd-btn-shadow-h:              $shadow-hover;
-$lkd-btn-shadow-a:              $shadow-active;
-$lkd-btn-types:                 'basic' 'flat' 'solid' 'filled' 'lkd';
-$lkd-btn-colors:                'primary' 'secondary' 'info' 'success' 'alert' 'danger' 'extra' 'dark' 'gray' 'white';
-$lkd-btn-default-type:          'basic';
-$lkd-btn-default-color:         'primary';
+$lkd-btn-pad-y:                         .5rem;
+$lkd-btn-pad-x:                         2rem;
+$lkd-btn-size:                          12rem;
+$lkd-btn-corner:                        $corner;
+$lkd-btn-border:                        $border-weigth;
+$lkd-btn-border-line:                   $border-line;
+$lkd-btn-back:                          $clr-wht;
+$lkd-btn-behavior:                      $lkd-transition;
+$lkd-btn-text:                          $text-base;
+$lkd-btn-align:                         center;
+$lkd-btn-shadow-n:                      $shadow-normal;
+$lkd-btn-shadow-h:                      $shadow-hover;
+$lkd-btn-shadow-a:                      $shadow-active;
+$lkd-btn-types:                         'basic' 'flat' 'solid' 'filled' 'lkd';
+$lkd-btn-colors:                        'primary' 'secondary' 'info' 'success' 'alert' 'danger' 'extra' 'dark' 'gray' 'white';
+$lkd-btn-default-type:                  'basic';
+$lkd-btn-default-color:                 'primary';
 
 // --------------------------------------------------
 // --- LKD SIDEBAR
 // --------------------------------------------------
 
-$lkd-sidebar-text:              $clr-ext;
-$lkd-sidebar-back:              'white';
+$lkd-sidebar-text:                      $clr-ext;
+$lkd-sidebar-back:                      'white';
 
 // --------------------------------------------------
 // --- VIEWER
 // --------------------------------------------------
 
-$lkd-viewer-border:             1px solid $clr-gry;
-$lkd-viewer-color:              $clr-pry;
-$lkd-viewer-border-pasive:      1px solid transparent;
-$lkd-viewer-text-active:        $text-select;
-$lkd-viewer-text-pasive:        $text-unselect;
-$lkd-viewer-background:         lighten($clr-wht, 40%);
+$lkd-viewer-border:                     1px solid $clr-gry;
+$lkd-viewer-color:                      $clr-pry;
+$lkd-viewer-border-pasive:              1px solid transparent;
+$lkd-viewer-text-active:                $text-select;
+$lkd-viewer-text-pasive:                $text-unselect;
+$lkd-viewer-background:                 lighten($clr-wht, 40%);
 
 // --------------------------------------------------
 // --- PILLS
 // --------------------------------------------------
 
-$pill-color-default:            'secondary';
+$pill-color-default:                    'primary';
 
 // --------------------------------------------------
 // --- VOYAGER VARIABLES
