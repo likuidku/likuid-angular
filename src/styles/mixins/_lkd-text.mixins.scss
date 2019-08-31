@@ -29,6 +29,10 @@
     @include lkd-text($color, $size: $text-title-medium, $spacing: .25rem);
 }
 
+@mixin lkd-block-txt-title($color: $text-color) {
+    @include lkd-text($color, $size: $text-subtitle, $transform: uppercase);
+}
+
 // --- SUBTITLES ------------------------------------
 
 
@@ -61,6 +65,10 @@
 
 @mixin lkd-pgraph-block($color: $text-color) {
     @include lkd-text($color, $size: $text-subtitle);
+}
+
+@mixin lkd-block-txt-text($color: $text-color) {
+    @include lkd-text($color, $size: $text-base, $weight: $text-light);
 }
 
 // --- COLOR CLASSES --------------------------------

@@ -1,0 +1,12 @@
+@import '../styles/lkd-commons';
+
+:host {
+    
+    lkd-pill {
+        
+        cursor:                 pointer;
+        position:               fixed;
+        bottom:                 30px;
+        right:                  30px;
+    }
+}

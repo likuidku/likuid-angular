@@ -1,0 +1,12 @@
+@import '../../../styles/lkd-commons';
+
+.title {
+    @include lkd-block-txt-title;
+    margin-bottom:              .5rem;
+}
+
+.text {
+    @include lkd-block-txt-text;
+    text-align:                 justify;
+    margin-bottom:              2rem;
+}

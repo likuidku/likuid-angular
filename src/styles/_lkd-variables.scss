@@ -48,6 +48,10 @@ $enable-lkd-viewer-back:                true;
 $enable-lkd-alert-back-colors:          true;
 $enable-lkd-alert-title-colors:         true;
 
+// --- TEMPLATES --------------------------------
+
+$enable-voyager:                        true;
+
 // ----------------------------------------------
 // --- GLOBAL TYPES
 // ----------------------------------------------
@@ -151,7 +155,8 @@ $text-base:                             $text-size * 1; // Browser default usual
 $text-xsmall:                           $text-base * .5;
 $text-small:                            $text-base * .8;
 $text-subtitle:                         $text-base * 1.2;
-$text-title-small:                      $text-base * 1.5;
+$text-title-small:                      $text-base * 1.4;
+$text-title-normal:                     $text-base * 1.6;
 $text-title-medium:                     $text-base * 2;
 $text-title:                            $text-base * 3;
 $text-big:                              $text-base * 3.5;
@@ -216,7 +221,7 @@ $lkd-btn-align:                         center;
 $lkd-btn-shadow-n:                      $shadow-normal;
 $lkd-btn-shadow-h:                      $shadow-hover;
 $lkd-btn-shadow-a:                      $shadow-active;
-$lkd-btn-types:                         'basic' 'flat' 'solid' 'filled' 'lkd';
+$lkd-btn-types:                         'basic' 'flat' 'solid' 'filled' 'lkd' 'vyg';
 $lkd-btn-colors:                        'primary' 'secondary' 'info' 'success' 'alert' 'danger' 'extra' 'dark' 'gray' 'white';
 $lkd-btn-default-type:                  'basic';
 $lkd-btn-default-color:                 'primary';
@@ -249,3 +254,4 @@ $pill-color-default:                    'primary';
 // --- VOYAGER VARIABLES
 // --------------------------------------------------
 
+$vyg-corner:                             100px;

@@ -1,0 +1,75 @@
+@import '../../../styles/lkd-commons';
+
+.header {
+    
+    padding:                        100px 0;
+    text-align:                     center;
+    
+    h1 {
+        
+        @include lkd-text($vyg-gry, $text-title-medium, $text-normal, 3px, 1, uppercase);
+        display:                    inline-block;
+        margin:                     0 auto;
+        background:                 lkd-gradient($vyg-pry, $darken: 20%);
+        background-clip:            text;
+        color:                      transparent; 
+    }
+}
+
+.body {
+
+    @include lkd-flex($jus: space-between, $aln: flex-start);
+    max-width:                      1200px;
+    margin:                         0 auto;
+
+    .text {
+
+        width:                      48%;
+    }
+
+    .composition {
+
+        width:                      48%;
+        position:                   relative;
+        z-index:                    10;
+
+        .image {
+
+            position:               absolute;
+            width:                  55%;
+            box-shadow:             0 1rem 2.5rem transparentize($vyg-sdw, .1);
+            border-radius:          3px;
+            outline-offset:         .8rem;
+            transition:             all .2s;
+
+            &:nth-child(1) {
+
+                left:               0;
+                top:                -1.2rem;
+            }
+
+            &:nth-child(2) {
+
+                right:              0;
+                top:                1.2rem;
+            }
+
+            &:nth-child(3) {
+
+                left:               20%;
+                top:                8rem;
+            }
+
+            &:hover {
+                z-index:            20;
+                transform:          scale(1.05) translateX(-.5rem);
+                box-shadow:         0 1.5rem 2.5rem transparentize($vyg-sdw, .2);
+                outline:            .8rem solid $vyg-pry;
+            }
+        }
+
+        &:hover .image:not(:hover)  {
+            transform:              scale(.95);
+        }
+    }
+}

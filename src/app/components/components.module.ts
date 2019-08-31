@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 // --- LIKUID MODULES --------------------------------
 import { DirectivesModule } from '../directives/directives.module';
-import { LayoutModule } from '../layout/layout.module';
 // --- COMPONENTS ------------------------------------
 import { LkdNavbarComponent } from './lkd-navbar/lkd-navbar.component';
 import { LkdFooterComponent } from './lkd-footer/lkd-footer.component';
@@ -41,7 +40,6 @@ import { LkdTableComponent } from './lkd-table/lkd-table.component';
     CommonModule,
     RouterModule,
     DirectivesModule,
-    LayoutModule
   ],
   exports: [
     LkdNavbarComponent,

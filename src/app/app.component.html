@@ -1,4 +1,4 @@
-<lkd-navbar [config]="navBarMain"></lkd-navbar>
+<lkd-navbar [config]="navBarMain" *ngIf="navbar"></lkd-navbar>
 <div class="lkd-router-main">
     <router-outlet #appOutlet="outlet"></router-outlet>
 </div>
@@ -10,3 +10,5 @@
     <p>Icons from <a href="http://www.pixeden.com">Pixeden</a></p>
     <p class="icon-link"><a href=mailto:ng-hello@likuid.eu><img class="logo" src="../../../assets/icons/mail.svg" alt="">contact us</a></p>
 </lkd-footer>
+<lkd-pill pry>hide menu</lkd-pill>
+<lkd-pill sry>show menu</lkd-pill>

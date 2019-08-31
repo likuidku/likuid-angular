@@ -29,58 +29,71 @@
     // --- SIZE SELECTOR -----------------------------
 
     @if $enable-lkd-btn-size-fixed == false {
+
         $size: auto;
     }
 
     // --- DEPTH SELECTOR ----------------------------
 
     @if $enable-flat-mode {
+        
         $sdw-n:                     none;
         $sdw-h:                     none;
         $sdw-a:                     none;
     }
     
     // --- STYLES ------------------------------------
-    display: inline-block;
-    cursor: pointer;
-    width: $size;
-    padding: $lkd-btn-pad-y $lkd-btn-pad-x;
-    border-radius: $lkd-btn-corner;
-    background: transparentize($back, .9);
-    border: $border;
+
+    @include lkd-flex($jus: center);
+    cursor:                         pointer;
+    width:                          $size;
+    padding:                        $lkd-btn-pad-y $lkd-btn-pad-x;
+    border-radius:                  $lkd-btn-corner;
+    background:                     transparentize($back, .9);
+    border:                         $border;
 
     // --- TYPO --------------------------------------
 
-    color: $color;
-    font-size: $lkd-btn-text;
-    text-align: $lkd-btn-align;
+    color:                          $color;
+    font-size:                      $lkd-btn-text;
+    text-align:                     $lkd-btn-align;
 
     // --- DEPTH -------------------------------------
 
-    box-shadow: none;
+    box-shadow:                     none;
     
     // --- BEHAVIOR ----------------------------------
     
-    transition: $behavior;
+    transition:                     $behavior;
+
+    // --- ICON --------------------------------------
+
+    img {
+        
+        width:                      1.2rem;
+        margin-left:                .5rem;
+    }
 
     // --- HOVER -------------------------------------
     
     &:hover {
-        $text: $back;
-        background: $color;
-        color: $text;
-        transform: $hover-state;
-        box-shadow: none;
+
+        $text:                      $back;
+        background:                 $color;
+        color:                      $text;
+        transform:                  $hover-state;
+        box-shadow:                 none;
     }
 
     // --- ACTIVE ------------------------------------
     
     &:active,
     &.lkd-on {
-        background: $color;
-        transform: $active-state;
-        box-shadow: none;
-        color: $clr-wht;
+
+        background:                 $color;
+        transform:                  $active-state;
+        box-shadow:                 none;
+        color:                      $clr-wht;
     }
 
     // --- WHITE SPECIAL CASE ------------------------
@@ -88,13 +101,15 @@
     @if $clr == 'white' {
 
         &:hover {
-            background: transparentize($color, .7);
+
+            background:             transparentize($color, .7);
         }
 
         &:active {
-            color: $clr-drk;
-            border: 1px solid $clr-drk;
-            background: transparentize($color, .7);
+
+            color:                  $clr-drk;
+            border:                 1px solid $clr-drk;
+            background:             transparentize($color, .7);
         }
     }
 
@@ -103,31 +118,34 @@
     &.lkd-off,
     &.lkd-off:hover,
     &.lkd-off:active {
-        cursor: default;
-        color: $back;
-        border: $border-off;
-        background: lighten($clr-gry, 20%);
-        box-shadow: none;
-        transform: none;
+
+        cursor:                     default;
+        color:                      $back;
+        border:                     $border-off;
+        background:                 lighten($clr-gry, 20%);
+        box-shadow:                 none;
+        transform:                  none;
     }
 
     // --- FLAT SELECTOR -----------------------------
     
     @if $type == 'flat' {
 
-        background: $color;
-        color: $back;
-        transition: $behavior;
+        background:                 $color;
+        color:                      $back;
+        transition:                 $behavior;
 
         &:hover {
-            background: darken($color, 10%);
-            box-shadow: none;
+
+            background:             darken($color, 10%);
+            box-shadow:             none;
         }
 
         &:active,
         &.lkd-on {
-            background: $clr-wht;
-            color: darken($color, 10%);
+
+            background:             $clr-wht;
+            color:                  darken($color, 10%);
         }
     }
 
@@ -135,19 +153,22 @@
 
     @if $type == 'solid' {
         
-        box-shadow: $sdw-n;
+        box-shadow:                 $sdw-n;
 
         &:hover {
-            box-shadow: $sdw-h;
+
+            box-shadow:             $sdw-h;
         }
 
         &:active {
-            box-shadow: none;
+
+            box-shadow:             none;
         }
         &.lkd-on {
-            box-shadow: $sdw-a;
-            background: $clr-wht;
-            color: $color;
+
+            box-shadow:             $sdw-a;
+            background:             $clr-wht;
+            color:                  $color;
         }
     }
 
@@ -155,22 +176,25 @@
 
     @if $type == 'filled' {
         
-        border: $border-lgt;
-        background: $color;
-        box-shadow: $sdw-n;
-        color: $back;
+        border:                     $border-lgt;
+        background:                 $color;
+        box-shadow:                 $sdw-n;
+        color:                      $back;
 
         &:hover {
-            box-shadow: $sdw-h;
-            background: darken($color, 10%);
+
+            box-shadow:             $sdw-h;
+            background:             darken($color, 10%);
         }
 
         &:active {
-            box-shadow: none;
+
+            box-shadow:             none;
         }
         &.lkd-on {
-            box-shadow: $sdw-a;
-            background: $color;
+
+            box-shadow:             $sdw-a;
+            background:             $color;
         }
     }
 
@@ -178,23 +202,50 @@
 
     @if $type == 'lkd' {
         
-        border: $border-lgt;
-        background: lkd-gradient($color);
-        box-shadow: $sdw-n;
-        color: $back;
+        border:                     $border-lgt;
+        background:                 lkd-gradient($color);
+        box-shadow:                 $sdw-n;
+        color:                      $back;
 
         &:hover {
-            box-shadow: $sdw-h;
-            background: lkd-gradient(darken($color, 5%));
+
+            box-shadow:             $sdw-h;
+            background:             lkd-gradient(darken($color, 5%));
         }
 
         &:active {
-            box-shadow: none;
+
+            box-shadow:             none;
         }
 
         &.lkd-on {
-            box-shadow: $sdw-a;
-            background: lkd-gradient($color);
+
+            box-shadow:             $sdw-a;
+            background:             lkd-gradient($color);
+        }
+    }
+
+    // ----------------------------------------------
+    // --- VOYAGER STYLE
+    // ----------------------------------------------
+
+    @if $enable-voyager {
+
+        @if $type == 'vyg' {
+
+            border-radius:          $vyg-corner;
+
+            &:hover {
+                
+                transform:          translateY(-3px);
+                box-shadow:         0 .4rem .6rem $clr-sdw;
+            }
+
+            &:active {
+
+                transform:          translateY(-1px);
+                box-shadow:         0 .2rem .3rem $clr-sdw;
+            }
         }
     }
 }
@@ -206,6 +257,7 @@
 // --- DEFAULT --------------------------------------
 
 .lkd-btn {
+
     @include lkd-btn();
 }
 
@@ -222,7 +274,9 @@
         // --- GENERATE ONLY COLORS WITH GLOBAL STYLE ---
 
         @if $enable-lkd-btn-global-style {
+
             .lkd-btn-#{$color} {
+
                 @include lkd-btn($color, $global-style);
             }
         }
@@ -234,13 +288,16 @@
             // --- DEFAULT STYLE ------------------------
             
             .lkd-btn-#{$color} {
+
                 @include lkd-btn($color);
             }
 
             // --- ALL STYLES ----------------------------
             
             @each $type in $types {
+
                 .lkd-btn-#{$color}-#{$type} {
+
                     @include lkd-btn($color, $type);
                 }
             }
@@ -260,8 +317,11 @@
         // --- GENERATE ONLY COLORS WITH GLOBAL STYLE ---
 
         @if $enable-lkd-btn-global-style {
+
             .lkd-btn {
+
                 &.#{$color} {
+
                     @include lkd-btn($color, $global-style);
                 }
             }
@@ -274,7 +334,9 @@
             // --- DEFAULT STYLE ------------------------
 
             .lkd-btn {
+
                 &.#{$color} {
+
                     @include lkd-btn($color);
                 }
             }
@@ -282,9 +344,13 @@
             // --- ALL STYLES ----------------------------
 
             .lkd-btn {
+
                 &.#{$color} {
+
                     @each $type in $types {
+
                         &.#{$type} {
+
                             @include lkd-btn($color, $type);
                         }
                     }

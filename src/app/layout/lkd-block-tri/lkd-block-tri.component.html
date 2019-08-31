@@ -1,0 +1,13 @@
+<div class="header">
+    <h1>{{data.title}}</h1>
+</div>
+<div class="body">
+    <div class="text">
+        <lkd-block-txt *ngFor="let b of data.blockTexts, let i = index" [data]="data.blockTexts[i]"></lkd-block-txt>
+        <a lkd-btn class="vyg" #button [routerLink]="data.button.link">{{data.button.text}} 
+            <img *ngIf="data.button.icon" class="icon" src="../../../assets/images/templates/voyager/{{data.button.icon}}" alt=""></a>
+    </div>
+    <div class="composition">
+        <img *ngFor="let img of data.tri, let i = index" src="../../../assets/images/templates/voyager/{{data.tri[i]}}" alt="travel photo" class="image">
+    </div>
+</div>

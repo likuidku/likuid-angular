@@ -31,7 +31,7 @@ export class FormatterService {
 
   // DEPRECATED ELIMINAR TODAS
 
-  // --- CLASS ADDER --------------------------------- 
+  // --- CLASS ADDER ---------------------------------
 
   addClass(addClass: string, element: ElementRef, renderer: Renderer2): void {
     renderer.addClass(element.nativeElement, addClass);

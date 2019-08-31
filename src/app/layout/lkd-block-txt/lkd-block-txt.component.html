@@ -1,0 +1,11 @@
+<ng-template #content>
+    <ng-content select="title"></ng-content>
+    <ng-content select="text"></ng-content>  
+</ng-template>
+<ng-template #binding>
+        <h3 class="title">{{data.title}}</h3>
+        <p class="text">{{data.text}}</p>
+</ng-template>
+
+<ng-container [ngTemplateOutlet]="content" *ngIf="!data"></ng-container>
+<ng-container [ngTemplateOutlet]="binding" *ngIf="data"></ng-container>
