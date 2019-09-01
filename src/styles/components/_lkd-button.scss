@@ -234,17 +234,18 @@
         @if $type == 'vyg' {
 
             border-radius:          $vyg-corner;
+            transition:             all .2s;
 
             &:hover {
                 
                 transform:          translateY(-3px);
-                box-shadow:         0 .4rem .6rem $clr-sdw;
+                box-shadow:         0 .4rem .6rem $vyg-sdw;
             }
 
             &:active {
 
                 transform:          translateY(-1px);
-                box-shadow:         0 .2rem .3rem $clr-sdw;
+                box-shadow:         0 .2rem .3rem $vyg-sdw;
             }
         }
     }

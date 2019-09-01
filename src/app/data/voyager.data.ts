@@ -1,5 +1,16 @@
-import { BlockTri } from '../models/lkd-interfaces';
+import { BlockTri, Catcheye } from '../models/lkd-interfaces';
 
+// ----------------------------------------------
+// --- HEADER
+// ----------------------------------------------
+
+export const catcheyeHeader: Catcheye = {
+    title: 'outdoors',
+    subtitle: 'is where life happens',
+    c2a: 'let\'s tour',
+    logo: '/templates/voyager/images/logo-white.png',
+    back: 'url(../../../assets/templates/voyager/images/hero.jpg)'
+};
 
 export const blockTri: BlockTri = {
     title: 'the ultimate adventures',
@@ -21,8 +32,8 @@ export const blockTri: BlockTri = {
         }
     ],
     tri: [
-        'nat-1.jpg',
-        'nat-2.jpg',
-        'nat-3.jpg'
+        '/templates/voyager/images/nat-1.jpg',
+        '/templates/voyager/images/nat-2.jpg',
+        '/templates/voyager/images/nat-3.jpg'
     ]
 };

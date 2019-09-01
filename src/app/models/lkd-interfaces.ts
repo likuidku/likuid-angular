@@ -50,6 +50,14 @@ export interface Alert {
 // --- LAYOUTS
 // ----------------------------------------------
 
+export interface Catcheye {
+  title: string;
+  subtitle: string;
+  c2a: string;
+  logo?: string;
+  back?: string;
+}
+
 export interface BlockTxt {
 
   title: string;

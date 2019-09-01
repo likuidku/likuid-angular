@@ -1,12 +1,13 @@
-<div class="lkd-header">
+<div class="lkd-catcheye-header" #catcheyeHeader>
+  <div class="gradient"></div>
   <div class="logo-box">
-    <img src="../../../assets/images/templates/voyager/logo-white.png" alt="logo" class="logo">
+    <img *ngIf="data.logo" src="../../../assets{{data.logo}}" alt="logo" class="logo">
   </div>
   <div class="catcheye">
     <h1>
-      <span class="title">outdoors</span>
-      <span class="subtitle">is where life happens</span>
+      <span class="title">{{data.title}}</span>
+      <span class="subtitle">{{data.subtitle}}</span>
     </h1>
-    <a class="lkd-btn-vyg">Let's Tour</a>
+    <a class="lkd-btn-vyg">{{data.c2a}}</a>
   </div>
 </div>

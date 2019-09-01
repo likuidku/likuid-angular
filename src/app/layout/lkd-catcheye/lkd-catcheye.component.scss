@@ -1,14 +1,16 @@
 @import '../../../styles/lkd-commons';
 
-.lkd-header {
+.lkd-catcheye-header {
 
     position:               relative;
     height:                 90vh;
-    background-image:       linear-gradient(to right bottom, transparentize($vyg-pry, .4), transparentize($vyg-sry, .4)), 
-                            url(../../../assets/images/templates/voyager/hero.jpg);
-    background-size:        cover;
-    background-position:    top;
     clip-path:              polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    .gradient {
+        min-width:          100%;
+        min-height:         100%;
+        background-image:   linear-gradient(to right bottom, transparentize($vyg-pry, .4), transparentize($vyg-sry, .4));
+    }
 }
 
 .logo-box {
@@ -25,7 +27,7 @@
 
 .catcheye {
 
-    @include lkd-flex($jus: center);
+    @include lkd-flex(column, center);
     @include lkd-center(40%);  
 
     .title {
@@ -81,7 +83,7 @@
         &:hover {
 
             transform:      translateY(-3px);
-            box-shadow:     0 10px 20px transparentize($clr-drk, .8);
+            box-shadow:     0 .4rem .6rem $vyg-sdw;
 
             &::after {
                 transform:  scale(1.6, 1.4);
@@ -92,7 +94,7 @@
         &:active {
             
             transform:      translateY(-1px);
-            box-shadow:     0 10px 10px transparentize($clr-drk, .8);
+            box-shadow:     0 .2rem .3rem $vyg-sdw;
         }
     }
 }
