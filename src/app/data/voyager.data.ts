@@ -72,3 +72,23 @@ export const blockCards: BlockCard = {
         },
     ]
 };
+
+// ----------------------------------------------
+// --- SPINS
+// ----------------------------------------------
+
+export const spins = [
+    {
+        colorA: '#ffb900',
+        colorB: '#ff7730'
+    },
+    {
+        colorA: '#7ed56f',
+        colorB: '#28b485'
+    },
+    {
+        colorA: '#2998ff',
+        colorB: '#5643fa'
+    }
+];
+

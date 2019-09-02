@@ -10,8 +10,8 @@
         <div class="vyg-gradient"></div>
         <lkd-block-card [data]="blockCards"></lkd-block-card>
     </section>
-    <section>
-        <lkd-block-card [data]="blockCardsSpin"></lkd-block-card>
+    <section class="spin-section">
+        <lkd-spin *ngFor="let spin of spins, let i = index" [config]="spins[i]"></lkd-spin>
     </section>
 </main>
 

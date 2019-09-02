@@ -2,7 +2,7 @@
 
 .card-body {
 
-    @include lkd-flex(column, $flex: inline-flex);
+    @include lkd-flex(column);
     padding:                    $padding-xl $padding-x;
     border-radius:              $corner-global;
     background-color:           rgba($clr-wht, .8);

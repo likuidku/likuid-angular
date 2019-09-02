@@ -7,24 +7,25 @@
 
 .vyg-gradient {
 
-    position:           absolute;
-    top:                0;
-    left:               0;
-    z-index:            -1;
-    min-width:          100%;
-    min-height:         100%;
-    background-image:   linear-gradient(to right bottom, rgba($vyg-pry, .8), rgba($vyg-sry, .3));
+    position:                   absolute;
+    top:                        0;
+    left:                       0;
+    z-index:                    -1;
+    min-width:                  100%;
+    min-height:                 100%;
+    background-image:           linear-gradient(to right bottom, rgba($vyg-pry, .8), rgba($vyg-sry, .3));
 }
 
 
 header {
 
-    position:               relative;
-    height:                 90vh;
-    clip-path:              polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position:                   relative;
+    height:                     90vh;
+    clip-path:                  polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 main {
+
     margin-top:                 -15vh;
     padding-top:                15vh;
     padding-bottom:             $padding-xx;
@@ -33,6 +34,7 @@ main {
 }
 
 section {
+
     padding:                    6rem 0;
 
     &.vyg-section {
@@ -42,5 +44,18 @@ section {
         height:                 90vh;
         margin-top:             6rem;
         clip-path:              polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    }
+
+    &.spin-section {
+
+        @include lkd-flex($jus: space-between);
+        padding:                10rem 0;
+        max-width:              1200px;
+        margin:                 0 auto;
+
+        lkd-spin {
+            
+            margin:             1rem;
+        }
     }
 }

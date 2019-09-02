@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { blockTri, catcheyeHeader, blockCards } from '../../data/voyager.data';
+import { blockTri, catcheyeHeader, blockCards, spins } from '../../data/voyager.data';
 
 @Component({
   selector: 'lkd-template-voyager',
@@ -15,6 +15,7 @@ export class TemplateVoyagerComponent implements OnInit {
   catcheyeHeader = catcheyeHeader;
   blockTri = blockTri;
   blockCards = blockCards;
+  spins = spins;
 
   // ----------------------------------------------
   // --- PROPERTIES
