@@ -1,18 +1,15 @@
 @import '../../../styles/lkd-commons';
 
-.header {
+.block-heading {
     
-    padding:                        100px 0;
+    display:                        block;
+    margin:                         0 auto;
     text-align:                     center;
     
     h1 {
-        
-        @include lkd-text($vyg-gry, $text-title-medium, $text-normal, 3px, 1, uppercase);
-        display:                    inline-block;
-        margin:                     0 auto;
-        background:                 lkd-gradient($vyg-pry, $darken: 20%);
-        background-clip:            text;
-        color:                      transparent; 
+        @include lkd-text($text-color, $text-title-medium, $text-normal, 3px, 1, uppercase);
+        @include lkd-text-gradient($vyg-pry, $darken: 30%);
+        padding-bottom:             2rem;
     }
 }
 
@@ -20,11 +17,11 @@
 
     @include lkd-flex($jus: space-between, $aln: flex-start);
     max-width:                      1200px;
-    margin:                         0 auto;
+    margin:                         6rem auto 0;
 
     .text {
 
-        width:                      48%;
+        width:                      45%;
     }
 
     .composition {

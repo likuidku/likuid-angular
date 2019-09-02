@@ -1,4 +1,4 @@
-<ng-template #alertConfigType>
+<ng-template #config>
     <div class="back" *ngIf="visible">
         <div class="dialog">
             <div class="header">
@@ -22,7 +22,7 @@
     </div>
 </ng-template>
 
-<ng-template #alertContentType>
+<ng-template #content>
     <div class="back" *ngIf="visible">
         <div class="dialog">
             <div class="header">
@@ -56,5 +56,5 @@
 
 
 
-<ng-container [ngTemplateOutlet]="alertConfigType" *ngIf="config"></ng-container>
-<ng-container [ngTemplateOutlet]="alertContentType" *ngIf="!config"></ng-container>
+<ng-container [ngTemplateOutlet]="config" *ngIf="config"></ng-container>
+<ng-container [ngTemplateOutlet]="content" *ngIf="!config"></ng-container>

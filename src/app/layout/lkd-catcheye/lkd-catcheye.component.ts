@@ -10,14 +10,9 @@ export class LkdCatcheyeComponent implements OnInit {
 
   @Input() data: Catcheye;
 
-  @ViewChild('catcheyeHeader', {static: true}) headerBack: ElementRef;
-
-  constructor(
-    public renderer: Renderer2
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.renderer.setStyle(this.headerBack.nativeElement, 'background', this.data.back);
   }
 
 }

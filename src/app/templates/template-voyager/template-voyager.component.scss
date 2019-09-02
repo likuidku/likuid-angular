@@ -1,8 +1,46 @@
 @import '../../../styles/lkd-commons';
 
+
+// ----------------------------------------------
+// --- TEMPLATE CLASSES
+// ----------------------------------------------
+
+.vyg-gradient {
+
+    position:           absolute;
+    top:                0;
+    left:               0;
+    z-index:            -1;
+    min-width:          100%;
+    min-height:         100%;
+    background-image:   linear-gradient(to right bottom, rgba($vyg-pry, .7), rgba($vyg-sry, .7));
+}
+
+
+header {
+
+    position:               relative;
+    height:                 90vh;
+    clip-path:              polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
 main {
     margin-top:                 -15vh;
     padding-top:                15vh;
     padding-bottom:             $padding-xx;
     background:                 $clr-wht;
+
+}
+
+section {
+    padding:                    6rem 0;
+
+    &.vyg-section {
+
+        @include lkd-flex($jus: center);
+        position:               relative;
+        height:                 90vh;
+        margin-top:             6rem;
+        clip-path:              polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    }
 }

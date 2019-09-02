@@ -1,0 +1,31 @@
+@import '../../../styles/lkd-commons';
+
+:host {
+    @include lkd-flex(column);
+    max-width:                      1200px;
+    margin:                         0 auto;
+    
+    .block-heading {
+        
+        display:                        block;
+        margin:                         0 auto;
+        text-align:                     center;
+        
+        h1 {
+            @include lkd-text($text-color, $text-title-medium, $text-normal, 3px, 1, uppercase);
+            @include lkd-text-gradient($vyg-pry, $darken: 30%);
+            padding-bottom:             2rem;
+        }
+    }
+    
+    .cards-box {
+        
+        @include lkd-flex($jus: space-between);
+        padding:                        3rem 0;
+    
+        lkd-card {
+            width:                      22%;
+        }
+    }
+
+}

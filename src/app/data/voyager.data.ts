@@ -1,4 +1,4 @@
-import { BlockTri, Catcheye } from '../models/lkd-interfaces';
+import { BlockTrimg, Catcheye, BlockCard } from '../models/lkd-interfaces';
 
 // ----------------------------------------------
 // --- HEADER
@@ -8,11 +8,15 @@ export const catcheyeHeader: Catcheye = {
     title: 'outdoors',
     subtitle: 'is where life happens',
     c2a: 'let\'s tour',
-    logo: '/templates/voyager/images/logo-white.png',
-    back: 'url(../../../assets/templates/voyager/images/hero.jpg)'
+    logo: '/templates/voyager/icons/logo-header.svg',
+    back: 'url(assets/templates/voyager/images/hero.jpg)'
 };
 
-export const blockTri: BlockTri = {
+// ----------------------------------------------
+// --- BLOCK TRIMAGE
+// ----------------------------------------------
+
+export const blockTri: BlockTrimg = {
     title: 'the ultimate adventures',
     button: {
         text: 'Learn More',
@@ -35,5 +39,36 @@ export const blockTri: BlockTri = {
         '/templates/voyager/images/nat-1.jpg',
         '/templates/voyager/images/nat-2.jpg',
         '/templates/voyager/images/nat-3.jpg'
+    ]
+};
+
+// ----------------------------------------------
+// --- BLOCK CARDS
+// ----------------------------------------------
+
+export const blockCards: BlockCard = {
+
+    back: 'url(assets/templates/voyager/images/nat-4.jpg)',
+    cards: [
+        {
+            title: 'explore the world',
+            icon: '/templates/voyager/icons/block-card-1.svg',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dolores quibusdam expedita itaque fuga id.'
+        },
+        {
+            title: 'meet nature',
+            icon: '/templates/voyager/icons/block-card-2.svg',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dolores quibusdam expedita itaque fuga id.'
+        },
+        {
+            title: 'find your way',
+            icon: '/templates/voyager/icons/block-card-3.svg',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dolores quibusdam expedita itaque fuga id.'
+        },
+        {
+            title: 'live a healthier life',
+            icon: '/templates/voyager/icons/block-card-4.svg',
+            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dolores quibusdam expedita itaque fuga id.'
+        },
     ]
 };

@@ -1,0 +1,39 @@
+@import '../../../styles/lkd-commons';
+
+.card-body {
+
+    @include lkd-flex(column, $flex: inline-flex);
+    padding:                    $padding-xl $padding-x;
+    border-radius:              $corner-global;
+    background-color:           rgba($clr-wht, .8);
+    box-shadow:                 0 1rem 2.5rem rgba($clr-sdw, .15);
+    transition:                 all .2s; 
+
+    .icon {
+
+        width:                  5rem;
+        transition:             all .2s;
+    }
+
+    .title {
+
+        @include lkd-title($color: $clr-drk, $size: $text-title-card);
+        margin:                 1.5rem 0 .5rem;
+        text-transform:         uppercase;
+    }
+
+    .text {
+
+        @include lkd-pgraph($align: justify);
+    }
+
+    &:hover {
+        transform:              translateY(-1rem);
+
+        .icon {
+ 
+            transform:          scale(1.1);
+        }
+    }
+}
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Card } from '../../models/lkd-interfaces';
 
 @Component({
   selector: 'lkd-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lkd-card.component.scss']
 })
 export class LkdCardComponent implements OnInit {
+
+  @Input() data: Card;
 
   constructor() { }
 

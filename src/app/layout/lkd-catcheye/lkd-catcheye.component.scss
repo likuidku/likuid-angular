@@ -1,16 +1,9 @@
 @import '../../../styles/lkd-commons';
 
-.lkd-catcheye-header {
+.catcheye {
 
     position:               relative;
-    height:                 90vh;
-    clip-path:              polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-    .gradient {
-        min-width:          100%;
-        min-height:         100%;
-        background-image:   linear-gradient(to right bottom, transparentize($vyg-pry, .4), transparentize($vyg-sry, .4));
-    }
+    min-height:             100%;
 }
 
 .logo-box {
@@ -25,7 +18,7 @@
 }
 
 
-.catcheye {
+.text-box {
 
     @include lkd-flex(column, center);
     @include lkd-center(40%);  

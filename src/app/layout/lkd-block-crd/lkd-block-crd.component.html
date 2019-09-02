@@ -1,0 +1,6 @@
+<div class="block-heading" *ngIf="data">
+  <h1>{{data.title}}</h1>
+</div>
+<div class="cards-box">
+    <lkd-card *ngFor="let card of data.cards, let i = index" [data]="data.cards[i]"></lkd-card>
+</div>

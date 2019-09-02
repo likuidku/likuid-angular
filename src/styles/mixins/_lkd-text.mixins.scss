@@ -11,13 +11,20 @@
     text-transform: $transform;
 } 
 
-// --- TITLES ---------------------------------------
-
-@mixin lkd-title($color: $text-color) {
-    @include lkd-text($color, $text-title, $transform: capitalize);
+@mixin lkd-text-gradient($color-1: $clr-pry, $color-2: $color-1, $darken: 10%, $ang: 45deg) {
+    display:                    inline-block;
+    background:                 lkd-gradient($color-1, $color-2, $darken, $ang);
+    background-clip:            text;
+    color:                      transparent; 
 }
 
-@mixin lkd-title-slim($color: $text-color) {
+// --- TITLES ---------------------------------------
+
+@mixin lkd-title($color: $text-color, $size: $lkd-title-xb) {
+    @include lkd-text($color, $size, $transform: capitalize);
+}
+
+@mixin lkd-title-slim($color: $text-color, $size: $lkd-title-n) {
     @include lkd-text($color, $text-title, $weight: $text-slim, $spacing: .8rem, $transform: capitalize);
 }
 

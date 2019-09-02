@@ -7,6 +7,7 @@ import { LkdBlockTriComponent } from './lkd-block-tri/lkd-block-tri.component';
 import { LkdBlockTxtComponent } from './lkd-block-txt/lkd-block-txt.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../directives/directives.module';
+import { LkdBlockCrdComponent } from './lkd-block-crd/lkd-block-crd.component';
 
 
 
@@ -15,7 +16,8 @@ import { DirectivesModule } from '../directives/directives.module';
     LkdCatcheyeComponent,
     LkdBlockComponent,
     LkdBlockTriComponent,
-    LkdBlockTxtComponent
+    LkdBlockTxtComponent,
+    LkdBlockCrdComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { DirectivesModule } from '../directives/directives.module';
     LkdCatcheyeComponent,
     LkdBlockComponent,
     LkdBlockTriComponent,
-    LkdBlockTxtComponent
+    LkdBlockTxtComponent,
+    LkdBlockCrdComponent
   ]
 })
 export class LayoutModule { }

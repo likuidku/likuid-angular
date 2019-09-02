@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BlockTxt } from '../../models/lkd-interfaces';
+import { BlockText } from '../../models/lkd-interfaces';
 
 @Component({
   selector: 'lkd-block-txt',
@@ -8,7 +8,7 @@ import { BlockTxt } from '../../models/lkd-interfaces';
 })
 export class LkdBlockTxtComponent implements OnInit {
 
-  @Input() data: BlockTxt;
+  @Input() data: BlockText;
 
   constructor() { }
 

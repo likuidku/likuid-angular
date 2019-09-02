@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild, ElementRef, Renderer2, OnInit } from '@angular/core';
-import { BlockTri } from '../../models/lkd-interfaces';
+import { BlockTrimg } from '../../models/lkd-interfaces';
 
 @Component({
   selector: 'lkd-block-tri',
@@ -8,7 +8,7 @@ import { BlockTri } from '../../models/lkd-interfaces';
 })
 export class LkdBlockTriComponent implements OnInit {
 
-  @Input() data: BlockTri;
+  @Input() data: BlockTrimg;
   @ViewChild('button', {static: true}) button: ElementRef;
 
   constructor(

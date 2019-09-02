@@ -46,6 +46,26 @@ export interface Alert {
   };
 }
 
+export interface Card {
+  title: string;
+  text: string;
+  icon?: string;
+  image?: string;
+  link?: string;
+  button?: {
+    text: string;
+    link: string;
+  };
+}
+
+export interface Button {
+
+  text: string;
+  link: string;
+  color?: string;
+  icon?: string;
+}
+
 // ----------------------------------------------
 // --- LAYOUTS
 // ----------------------------------------------
@@ -58,21 +78,24 @@ export interface Catcheye {
   back?: string;
 }
 
-export interface BlockTxt {
+export interface BlockText {
 
   title: string;
   text: string;
 }
 
-export interface BlockTri {
+export interface BlockTrimg {
 
   title: string;
-  button?: {
-    text: string;
-    link: string;
-    color?: string;
-    icon?: string;
-  };
-  blockTexts: BlockTxt[];
+  button?: Button;
+  blockTexts: BlockText[];
   tri: string[];
+}
+
+export interface BlockCard {
+
+  cards: Card[];
+  back?: string;
+  title?: string;
+  button?: Button;
 }

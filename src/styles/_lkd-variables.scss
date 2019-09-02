@@ -152,15 +152,28 @@ $text-select:                           $clr-ext;
 $text-size:                             100%;
 
 $text-base:                             $text-size * 1; // Browser default usually (16px)
+
 $text-xsmall:                           $text-base * .5;
 $text-small:                            $text-base * .8;
-$text-subtitle:                         $text-base * 1.2;
+$text-normal:                           $text-base * 1.2;
+$text-medium:                           $text-base * 1.4;
+$text-large:                            $text-base * 1.6;
+$text-xlarge:                           $text-base * 1.8;
+$text-big:                              $text-base * 2;
+$text-xbig:                             $text-base * 3;
+$text-wow:                              $text-base * 5;
+
+$text-subtitle:                         $text-medium;
+$text-title-n:                          $text-xlarge;
+$text-title-l:                          $text-large;
+$text-title-xb:                         $text-xbig;
+$text-title-w:                          $text-wow;
+
+// deprecated
 $text-title-small:                      $text-base * 1.4;
 $text-title-normal:                     $text-base * 1.6;
 $text-title-medium:                     $text-base * 2;
 $text-title:                            $text-base * 3;
-$text-big:                              $text-base * 3.5;
-$text-xbig:                             $text-base * 5;
 
 // --- FONT WEIGHTS -----------------------------
 
@@ -250,8 +263,14 @@ $lkd-viewer-background:                 lighten($clr-wht, 40%);
 
 $pill-color-default:                    'primary';
 
+// ----------------------------------------------
+// --- CARDS
+// ----------------------------------------------
+
+$text-title-card:                       $text-normal;                        
+
 // --------------------------------------------------
 // --- VOYAGER VARIABLES
 // --------------------------------------------------
 
-$vyg-corner:                             100px;
+$vyg-corner:                            50px;

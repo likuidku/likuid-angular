@@ -1,7 +1,14 @@
-<header>
+<header #headerBack>
+    <div class="vyg-gradient"></div>
     <lkd-catcheye [data]="catcheyeHeader"></lkd-catcheye>
 </header>
 <main>
-    <lkd-block-tri [data]="blockTri"></lkd-block-tri>
+    <section>
+        <lkd-block-tri [data]="blockTri"></lkd-block-tri>
+    </section>
+    <section class="vyg-section" #blockCrdBack>
+        <div class="vyg-gradient"></div>
+        <lkd-block-crd [data]="blockCards"></lkd-block-crd>
+    </section>
 </main>
 
