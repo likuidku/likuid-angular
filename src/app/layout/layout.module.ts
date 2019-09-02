@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ComponentsModule } from '../components/components.module';
 import { LkdCatcheyeComponent } from './lkd-catcheye/lkd-catcheye.component';
 import { LkdBlockComponent } from './lkd-block/lkd-block.component';
-import { LkdBlockTriComponent } from './lkd-block-tri/lkd-block-tri.component';
-import { LkdBlockTxtComponent } from './lkd-block-txt/lkd-block-txt.component';
+import { LkdBlockTrimageComponent } from './lkd-block-trimage/lkd-block-trimage.component';
+import { LkdBlockTextComponent } from './lkd-block-text/lkd-block-text.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../directives/directives.module';
-import { LkdBlockCrdComponent } from './lkd-block-crd/lkd-block-crd.component';
+import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component';
 
 
 
@@ -15,9 +15,9 @@ import { LkdBlockCrdComponent } from './lkd-block-crd/lkd-block-crd.component';
   declarations: [
     LkdCatcheyeComponent,
     LkdBlockComponent,
-    LkdBlockTriComponent,
-    LkdBlockTxtComponent,
-    LkdBlockCrdComponent
+    LkdBlockTrimageComponent,
+    LkdBlockTextComponent,
+    LkdBlockCardComponent
   ],
   imports: [
     CommonModule,
@@ -28,9 +28,9 @@ import { LkdBlockCrdComponent } from './lkd-block-crd/lkd-block-crd.component';
   exports: [
     LkdCatcheyeComponent,
     LkdBlockComponent,
-    LkdBlockTriComponent,
-    LkdBlockTxtComponent,
-    LkdBlockCrdComponent
+    LkdBlockTrimageComponent,
+    LkdBlockTextComponent,
+    LkdBlockCardComponent
   ]
 })
 export class LayoutModule { }

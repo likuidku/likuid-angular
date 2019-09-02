@@ -20,6 +20,7 @@ import {
 } from './lkd-alert/lkd-alert.component';
 import { LkdCardComponent } from './lkd-card/lkd-card.component';
 import { LkdTableComponent } from './lkd-table/lkd-table.component';
+import { LkdCardSpinComponent } from './lkd-card-spin/lkd-card-spin.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LkdTableComponent } from './lkd-table/lkd-table.component';
     LkdAlertLinkDirective,
     LkdCardComponent,
     LkdTableComponent,
+    LkdCardSpinComponent,
   ],
   imports: [
     CommonModule,

@@ -2,11 +2,11 @@ import { Component, Input, ViewChild, ElementRef, Renderer2, OnInit } from '@ang
 import { BlockTrimg } from '../../models/lkd-interfaces';
 
 @Component({
-  selector: 'lkd-block-tri',
-  templateUrl: './lkd-block-tri.component.html',
-  styleUrls: ['./lkd-block-tri.component.scss']
+  selector: 'lkd-block-trimage',
+  templateUrl: './lkd-block-trimage.component.html',
+  styleUrls: ['./lkd-block-trimage.component.scss']
 })
-export class LkdBlockTriComponent implements OnInit {
+export class LkdBlockTrimageComponent implements OnInit {
 
   @Input() data: BlockTrimg;
   @ViewChild('button', {static: true}) button: ElementRef;

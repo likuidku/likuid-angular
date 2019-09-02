@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BlockText } from '../../models/lkd-interfaces';
 
 @Component({
-  selector: 'lkd-block-txt',
-  templateUrl: './lkd-block-txt.component.html',
-  styleUrls: ['./lkd-block-txt.component.scss']
+  selector: 'lkd-block-text',
+  templateUrl: './lkd-block-text.component.html',
+  styleUrls: ['./lkd-block-text.component.scss']
 })
-export class LkdBlockTxtComponent implements OnInit {
+export class LkdBlockTextComponent implements OnInit {
 
   @Input() data: BlockText;
 

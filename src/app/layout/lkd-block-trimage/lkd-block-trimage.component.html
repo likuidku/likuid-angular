@@ -3,7 +3,7 @@
 </div>
 <div class="body">
     <div class="text">
-        <lkd-block-txt *ngFor="let b of data.blockTexts, let i = index" [data]="data.blockTexts[i]"></lkd-block-txt>
+        <lkd-block-text *ngFor="let b of data.blockTexts, let i = index" [data]="data.blockTexts[i]"></lkd-block-text>
         <a lkd-btn class="vyg" #button [routerLink]="data.button.link">{{data.button.text}} 
             <img *ngIf="data.button.icon" class="icon" src="../../../assets{{data.button.icon}}" alt=""></a>
     </div>
