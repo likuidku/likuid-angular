@@ -20,13 +20,17 @@
 
 // --- TITLES ---------------------------------------
 
-@mixin lkd-title($color: $text-color, $size: $lkd-title-xb) {
-    @include lkd-text($color, $size, $transform: capitalize);
+@mixin lkd-title($color: $text-color, $size: $text-title-xb, $transform: capitalize) {
+    @include lkd-text($color, $size, $transform: $transform);
 }
 
-@mixin lkd-title-slim($color: $text-color, $size: $lkd-title-n) {
-    @include lkd-text($color, $text-title, $weight: $text-slim, $spacing: .8rem, $transform: capitalize);
+@mixin lkd-title-slim($color: $text-color, $size: $lkd-title-n, $transform: capitalize) {
+    @include lkd-text($color, $size, $text-slim, .8rem, $transform: $transform);
 }
+
+// ----------------------------------------------
+// --- deprecated
+// ----------------------------------------------
 
 @mixin lkd-title-small($color: $text-color) {
     @include lkd-text($color, $size: $text-title-small, $spacing: 0);
@@ -43,13 +47,17 @@
 // --- SUBTITLES ------------------------------------
 
 
-@mixin lkd-subtitle($color: $text-color, $transform: uppercase) {
-    @include lkd-text($color, $text-subtitle, $spacing: $letter-spacing, $transform: $transform);
+@mixin lkd-subtitle($color: $text-color, $size: $text-subtitle, $transform: uppercase) {
+    @include lkd-text($color, $size, $spacing: $letter-spacing, $transform: $transform);
 }
 
-@mixin lkd-subtitle-slim($color: $text-color, $transform: uppercase) {
-    @include lkd-text($color, $size: $text-subtitle, $weight: $text-light, $spacing: .25rem, $transform: $transform);
+@mixin lkd-subtitle-slim($color: $text-color, $size: $text-subtitle, $transform: uppercase) {
+    @include lkd-text($color, $size, $text-light, .25rem, $transform: $transform);
 }
+
+// ----------------------------------------------
+// --- deprecated
+// ----------------------------------------------
 
 @mixin lkd-subtitle-block($color: $text-color, $size: $text-title-small) {
     @include lkd-text($color, $size, $weight: $text-light, $spacing: .25rem);

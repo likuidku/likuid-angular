@@ -44,51 +44,11 @@
 
     // --- BOTON VOYAGER CATCHEYE
 
-    .lkd-btn-vyg {
+    lkd-btn-vyg {
 
-        @include lkd-text($clr-gry, $transform: uppercase);
-
-        cursor:             pointer;
-        position:           relative;
-        display:            inline-block;
-        background:         $clr-wht;
-        padding:            15px 40px;
-        border-radius:      50px;
-        animation:          moveInBottom 5s;
-        animation-fill-mode: backwards;
-        transition:         $lkd-transition;
-
-        &::after {
-
-            content:        "";
-            z-index:        -1;
-            display:        inline-block;
-            position:       absolute;
-            top:            0;
-            left:           0;
-            width:          100%;
-            height:         100%;
-            border-radius:  50px;
-            background:     $clr-wht;
-            transition:     all .4s;
-        }
-        
-        &:hover {
-
-            transform:      translateY(-3px);
-            box-shadow:     0 .4rem .6rem $vyg-sdw;
-
-            &::after {
-                transform:  scale(1.6, 1.4);
-                opacity:    0;
-            }
-        }
-
-        &:active {
-            
-            transform:      translateY(-1px);
-            box-shadow:     0 .2rem .3rem $vyg-sdw;
-        }
+        animation:              moveInBottom 5s;
+        animation-fill-mode:    backwards;
+        transition:             $lkd-transition;
     }
 }
 

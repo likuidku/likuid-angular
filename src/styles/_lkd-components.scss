@@ -5,6 +5,7 @@
 @import './components/lkd-navbar';
 @import './components/lkd-footer';
 @import './components/lkd-button';
+@import './components/lkd-button-voyager';
 @import './components/lkd-sidebar';
 @import './components/lkd-viewer';
 @import './components/lkd-alert';
@@ -40,6 +41,14 @@
 
 @if $enable-lkd-btn-attributes {
     @include lkd-btn-generator-attr($lkd-btn-colors, $lkd-btn-types);
+}
+
+// ----------------------------------------------
+// --- LKD BUTTON VOYAGER
+// ----------------------------------------------
+
+@if $enable-voyager {
+    @include lkd-btn-vyg-generator($list-colors-voyager);
 }
 
 // ----------------------------------------------

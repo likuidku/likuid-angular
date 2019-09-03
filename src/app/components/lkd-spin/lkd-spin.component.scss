@@ -6,38 +6,11 @@
     position:                   relative;
     perspective:                100rem;
     width:                      300px;
-    height:                     500px;
-
-    .spin-side {
-        
-        position:               absolute;
-        top:                    0;
-        left:                   0;
-        width:                  300px;
-        height:                 500px;
-        padding:                $padding-x;
-        border-radius:          $corner-global;
-        transition:             all .8s ease;
-        backface-visibility:    hidden;
-        box-shadow:             0 1.5rem 3rem rgba($clr-sdw, .3);
-
-        &.front {
-
-            background-color:   $clr-wht;
-
-        }
-
-        &.back {
-
-            transform:          rotateY(180deg);
-        }
-        
-    }
-        
+    height:                     500px;        
     
     &:hover .spin-side.front {
 
-        transform:              rotateY(180deg);
+        transform:              rotateY(-180deg);
     }
 
     &:hover .spin-side.back {
@@ -45,4 +18,99 @@
         transform:              rotateY(0);
     }
     
+}
+
+.spin-side {
+        
+    position:                   absolute;
+    overflow:                   hidden;
+    top:                        0;
+    left:                       0;
+    width:                      300px;
+    height:                     500px;
+    border-radius:              $corner-global;
+    transition:                 all .8s ease;
+    backface-visibility:        hidden;
+    box-shadow:                 0 1.5rem 3rem rgba($clr-sdw, .3);
+
+    &.front {
+
+        background-color:           $clr-wht;
+
+        .header {
+
+            position:               relative;
+            width:                  100%;
+            height:                 45%;
+            clip-path:              polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            background-position:    center;
+            background-size:        cover;
+            background-blend-mode:  screen;
+
+            .gradient {
+
+                width:              100%;
+                height:             100%;
+            }
+            
+        }
+        
+        h4 {
+    
+            @include lkd-subtitle-slim();
+            position:                   absolute;
+            top:                        30%;
+            right:                      5px;
+            width:                      70%;
+            padding-right:              1rem;
+            text-align:                 right;
+            color:                      $clr-wht;
+
+            span {
+                padding:                .5rem;
+                box-decoration-break:   clone;
+            }
+        }
+
+        .body {
+
+            width:                      100%;
+            margin-top:                 2rem;
+
+            ul {
+
+                width:                  80%;
+                margin:                 0 auto;
+
+                li {
+
+                    @include            lkd-pgraph($align: center);
+                    padding:            .5rem 1rem;
+
+                    &:not(:last-child) {
+
+                        border-bottom:  1px solid $clr-lgt;
+                    }
+                }
+            }
+        }
+    }
+
+    &.back {
+
+        transform:              rotateY(180deg);
+
+        @include lkd-flex(column, $jus: center);      
+
+        p {
+
+            @include lkd-pgraph($clr-wht, $text-big);
+        }
+
+        h3 {
+
+            @include lkd-text($clr-wht, $text-wow, $weight: $text-slim);
+            margin:             3rem 0;
+        }
+    }
 }

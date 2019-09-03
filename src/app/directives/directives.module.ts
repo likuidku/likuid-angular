@@ -40,6 +40,7 @@ import {
   LkdPillDirective,
   LkdPillAttrDirective
 } from './lkd-pill.directive';
+import { LkdBtnVygDirective, LkdBtnVygAttrDirective } from './lkd-btn-vyg.directive';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,9 @@ import {
     LkdTxtGrayDirective,
     LkdTxtWhiteDirective,
     // --- FORMATT DIRECTIVES -------------------------
-    LkdPillAttrDirective
+    LkdPillAttrDirective,
+    LkdBtnVygDirective,
+    LkdBtnVygAttrDirective
   ],
   imports: [
     CommonModule
@@ -119,7 +122,9 @@ import {
     LkdTxtGrayDirective,
     LkdTxtWhiteDirective,
     // --- FORMATT DIRECTIVES -------------------------
-    LkdPillAttrDirective
+    LkdPillAttrDirective,
+    LkdBtnVygDirective,
+    LkdBtnVygAttrDirective
   ]
 })
 export class DirectivesModule { }

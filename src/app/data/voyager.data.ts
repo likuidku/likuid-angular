@@ -80,15 +80,60 @@ export const blockCards: BlockCard = {
 export const spins = [
     {
         colorA: '#ffb900',
-        colorB: '#ff7730'
+        colorB: '#ff7730',
+        image: 'url(assets/templates/voyager/images/nat-5.jpg',
+        title: 'Cantabrian cornice',
+        details: [
+            '3 days tours',
+            'up to 30 people',
+            '2 tour guides',
+            'sleep in cozy hotels',
+            'difficulty: easy'
+        ],
+        back: {
+            text: 'only',
+            msg: '€ 275',
+            c2a: 'book now!',
+            link: ''
+        }
     },
     {
         colorA: '#7ed56f',
-        colorB: '#28b485'
+        colorB: '#28b485',
+        image: 'url(assets/templates/voyager/images/nat-6.jpg',
+        title: 'peaks of europe',
+        details: [
+            '5 days tours',
+            'up to 15 people',
+            '2 tour guides',
+            'sleep in cozy hotels',
+            'difficulty: medium'
+        ],
+        back: {
+            text: 'only',
+            msg: '€ 440',
+            c2a: 'book now!',
+            link: ''
+        }
     },
     {
         colorA: '#2998ff',
-        colorB: '#5643fa'
+        colorB: '#5643fa',
+        image: 'url(assets/templates/voyager/images/nat-7.jpg',
+        title: 'Pyrenean paradise',
+        details: [
+            '7 days tours',
+            'up to 10 people',
+            '3 tour guides',
+            'sleep in mountain shelters',
+            'difficulty: hard'
+        ],
+        back: {
+            text: 'only',
+            msg: '€ 680',
+            c2a: 'book now!',
+            link: ''
+        }
     }
 ];
 

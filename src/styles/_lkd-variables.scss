@@ -3,7 +3,7 @@
 // ----------------------------------------------
 
 $font-name:                             'Roboto';
-@import                                 url('https://fonts.googleapis.com/css?family=#{$font-name}:100,300,400,700&display=swap');
+@import                                 url('https://fonts.googleapis.com/css?family=#{$font-name}:100,300,400,700,900&display=swap');
 $font:                                  #{$font-name}, sans-serif;
 
 // ----------------------------------------------
@@ -161,7 +161,9 @@ $text-large:                            $text-base * 1.6;
 $text-xlarge:                           $text-base * 1.8;
 $text-big:                              $text-base * 2;
 $text-xbig:                             $text-base * 3;
+$text-alaa:                             $text-base * 4;
 $text-wow:                              $text-base * 5;
+
 
 $text-subtitle:                         $text-medium;
 $text-title-n:                          $text-xlarge;
@@ -274,3 +276,4 @@ $text-title-card:                       $text-normal;
 // --------------------------------------------------
 
 $vyg-corner:                            50px;
+$list-colors-voyager:                   'primary' 'secondary' 'info' 'success' 'alert' 'danger' 'extra' 'dark' 'gray' 'white';

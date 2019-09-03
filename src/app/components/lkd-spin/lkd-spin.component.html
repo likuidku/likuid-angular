@@ -1,8 +1,18 @@
 <div class="spin">
     <div class="spin-side front">
-        FRONT
+        <div class="header" #image></div>
+        <h4>
+            <span #title>{{config.title}}</span>
+        </h4>
+        <div class="body">
+            <ul>
+                <li *ngFor="let detail of config.details">{{detail}}</li>
+            </ul>
+        </div>
     </div>
     <div class="spin-side back" #back>
-        BACK
+        <p>{{config.back.text}}</p>
+        <h3>{{config.back.msg}}</h3>
+        <lkd-btn-vyg routerLink="{{config.back.ling}}">{{config.back.c2a}}</lkd-btn-vyg>
     </div>
 </div>
