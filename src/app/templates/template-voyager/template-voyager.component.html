@@ -12,8 +12,9 @@
     </section>
     <section class="spin-section">
         <lkd-spin *ngFor="let spin of spins, let i = index" [config]="spins[i]"></lkd-spin>
-    </section>
-    <section class="vyg-section">
+        <div class="vyg-section-footer">
+            <lkd-btn-vyg scs>discover all tours</lkd-btn-vyg>
+        </div>
     </section>
 </main>
 

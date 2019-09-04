@@ -99,18 +99,21 @@
     &.back {
 
         transform:              rotateY(180deg);
-
-        @include lkd-flex(column, $jus: center);      
+        padding:                3rem 0;
+        text-align:             center;
 
         p {
 
-            @include lkd-pgraph($clr-wht, $text-big);
+            @include lkd-pgraph($clr-wht, $text-base, $text-normal, center);
+            text-transform: uppercase;
+            width:              100%;
+            margin-top:         3rem;
         }
 
         h3 {
 
             @include lkd-text($clr-wht, $text-wow, $weight: $text-slim);
-            margin:             3rem 0;
+            margin:             .5rem 0 5rem;
         }
     }
 }

@@ -197,27 +197,7 @@ $line-height:                           1.7;
 $lkd-ani-time:                          .2s;
 $lkd-bezier:                            cubic-bezier(.17,1.1,.01,.9);
 $lkd-time-curve:                        $lkd-ani-time $lkd-bezier;
-$lkd-transition:                        color $lkd-time-curve, 
-                                        position $lkd-time-curve,
-                                        width $lkd-time-curve,
-                                        height $lkd-time-curve,
-                                        padding $lkd-time-curve,
-                                        transform  $lkd-time-curve,
-                                        border $lkd-time-curve,
-                                        border-top $lkd-time-curve,
-                                        border-right $lkd-time-curve,
-                                        border-bottom $lkd-time-curve,
-                                        border-left $lkd-time-curve,
-                                        border-radius $lkd-time-curve,
-                                        box-shadow $lkd-time-curve,
-                                        background-color $lkd-time-curve,
-                                        background-image $lkd-time-curve,
-                                        background-position $lkd-time-curve,
-                                        background-size $lkd-time-curve,
-                                        text-align $lkd-time-curve,
-                                        font-size $lkd-time-curve,
-                                        letter-spacing $lkd-time-curve,
-                                        color $lkd-time-curve;
+$lkd-transition:                        all $lkd-time-curve;
 
 // --------------------------------------------------
 // --- LKD BUTTON
