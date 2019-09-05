@@ -8,7 +8,7 @@
     
     h1 {
         @include lkd-text($text-color, $text-title-medium, $text-normal, 3px, 1, uppercase);
-        @include lkd-text-gradient($vyg-pry, $darken: 30%);
+        @include lkd-text-gradient($vyg-sry, $vyg-pry, $ratio: 20%);
         padding-bottom:             2rem;
     }
 }

@@ -2,9 +2,9 @@
 // --- STYLE FUNCTIONS
 // --------------------------------------------------
 
-@function lkd-gradient($color-1, $color-2: $color-1, $darken: 10%, $ang: 45deg) {
+@function lkd-gradient($color-1, $color-2: $color-1, $ratio: 10%, $ang: 45deg) {
 
-    $gradient: linear-gradient($ang, darken($color-1, $darken), $color-2);
+    $gradient: linear-gradient($ang, darken($color-1, $ratio), lighten($color-2, $ratio * .3));
     @return $gradient;
 }
 

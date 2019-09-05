@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 @mixin lkd-text($color: $text-color, $size: $text-base, $weight: $text-normal, $spacing: 0, $line: $line-height, $transform: none) {
+
     color: $color;
     font-size: $size;
     font-weight: $weight;
@@ -11,20 +12,15 @@
     text-transform: $transform;
 } 
 
-@mixin lkd-text-gradient($color-1: $clr-pry, $color-2: $color-1, $darken: 10%, $ang: 45deg) {
-    display:                    inline-block;
-    background:                 lkd-gradient($color-1, $color-2, $darken, $ang);
-    background-clip:            text;
-    color:                      transparent; 
-}
-
 // --- TITLES ---------------------------------------
 
 @mixin lkd-title($color: $text-color, $size: $text-title-xb, $transform: capitalize) {
+
     @include lkd-text($color, $size, $transform: $transform);
 }
 
 @mixin lkd-title-slim($color: $text-color, $size: $lkd-title-n, $transform: capitalize) {
+
     @include lkd-text($color, $size, $text-slim, .8rem, $transform: $transform);
 }
 
@@ -48,10 +44,12 @@
 
 
 @mixin lkd-subtitle($color: $text-color, $size: $text-subtitle, $transform: uppercase) {
+
     @include lkd-text($color, $size, $spacing: $letter-spacing, $transform: $transform);
 }
 
 @mixin lkd-subtitle-slim($color: $text-color, $size: $text-subtitle, $transform: uppercase) {
+
     @include lkd-text($color, $size, $text-light, .25rem, $transform: $transform);
 }
 
@@ -66,6 +64,7 @@
 // --- PARAGRAPHS -----------------------------------
 
 @mixin lkd-pgraph($color: $text-color, $size: $text-base, $weight: $text-light, $align: left, $spacing: 0, $line: $line-height) {
+
     @include lkd-text($color: $color, $size: $size, $weight: $weight, $spacing: $spacing, $line: $line);
     text-align: $align;
 }
@@ -86,16 +85,37 @@
     @include lkd-text($color, $size: $text-base, $weight: $text-light);
 }
 
-// --- COLOR CLASSES --------------------------------
+// ----------------------------------------------
+// --- COLOR CLASSES
+// ----------------------------------------------
 
 @mixin lkd-text-colors($colors) {
+
     @each $color in $colors {
+
         .txt-#{$color} {
+
             color: color($color);
         }
     }
 }
 
 @if $enable-txt-color-attributes {
+
     @include lkd-text-colors($list-colors);
 }
+
+// ----------------------------------------------
+// --- GRADIENT TEXT
+// ----------------------------------------------
+
+@mixin lkd-text-gradient($color-1: $clr-pry, $color-2: $color-1, $ratio: 10%, $ang: 45deg) {
+
+    display:                    inline-block;
+    background:                 lkd-gradient($color-1, $color-2, $ratio, $ang);
+    background-clip:            text;
+    color:                      transparent; 
+}
+
+
+

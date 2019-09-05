@@ -1,0 +1,87 @@
+@import '../../../styles/lkd-commons';
+
+.story {
+
+    max-width:                  50rem;
+    padding:                    3rem;
+    padding-left:               5rem;
+    border-radius:              $corner-global;
+    background-color:           $clr-wht;
+    box-shadow:                 0 2rem 4rem rgba($clr-sdw, .4);
+
+    .content {
+
+        .story-txt {
+
+            h3 {
+
+                @include lkd-title-small();
+                margin-bottom:          1rem;
+            }
+        
+            p {
+
+                @include lkd-pgraph();
+            }
+        }
+    
+        .story-shape {
+            
+            position:                   relative;
+            width:                      8rem;
+            height:                     8rem;
+            float:                      left;        
+            shape-outside:              circle(50% at 50% 50%);
+            clip-path:                  circle(50% at 50% 50%);
+            transform:                  translateX(-2rem);
+            backface-visibility:        hidden;
+    
+            .story-img {
+
+                height:                 100%;
+                transform:              scale(1.1);
+                transition:             all .3s;
+                backface-visibility:    hidden;
+            }
+
+            .story-cap {
+
+                @include lkd-pgraph($clr-wht, $align: center);
+                position:               absolute;
+                top:                    50%;
+                left:                   50%;
+                text-transform:         uppercase;
+                opacity:                0;
+                transform:              translate(-50%, 150%);
+                transition:             all .3s; 
+                backface-visibility:    hidden;
+            }
+        }
+    }
+
+    &:hover {
+
+        .content .story-shape {
+            
+            .story-img {
+                
+                transform:      scale(1);
+                filter:         blur(3px) brightness(80%);
+            }
+            
+            .story-cap {
+                
+                transform:      translate(-50%, -50%);
+                opacity:        1;
+            }
+        }
+    }
+}
+
+.skew {
+    transform: skewX(-8deg);
+}
+
+.skewI {
+    transform: skewX(8deg);
+}

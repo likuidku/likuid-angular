@@ -5,7 +5,7 @@
 // --- TEMPLATE CLASSES
 // ----------------------------------------------
 
-.vyg-gradient {
+.gradient {
 
     position:                   absolute;
     top:                        0;
@@ -16,12 +16,91 @@
     background-image:           linear-gradient(to right bottom, rgba($vyg-pry, .8), rgba($vyg-sry, .3));
 }
 
+.polygon-back {
+
+    @include lkd-flex($jus: center);
+    position:                   relative;
+    height:                     90vh;
+    margin-top:                 6rem;
+    clip-path:                  polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    background-position:        center !important;
+    background-size:            cover !important;
+}
+
+.section-heading {
+
+    display:                    block;
+    margin:                     0 auto;
+    text-align:                 center;
+    
+    h1 {
+        @include lkd-text($text-color, $text-title-medium, $text-normal, 3px, 1, uppercase);
+        @include lkd-text-gradient($vyg-sry, $vyg-pry, $ratio: 20%);
+        padding-bottom:         2rem;
+    }
+}
+
+.section-footer {
+    
+    width:                      100%;
+    text-align:                 center;
+}
+
+.section-prices {
+
+    @include lkd-flex($jus: space-between);
+    padding:                    6rem 0;
+    max-width:                  1200px;
+    margin:                     0 auto;
+
+    lkd-spin {
+        
+        margin:                 1rem;
+    }
+}
+
+.section-tours {
+
+    position:                   relative;
+    background-color:           rgba($vyg-wht, .5);
+
+    .testimonials {
+    
+        @include lkd-flex(column, $jus: center, $aln: center);
+        padding:                6rem 3rem;
+    
+        lkd-story {
+        
+            margin:             2rem 0;
+        }
+    }
+
+    .bg-video {
+    
+        z-index: -1;
+        position:                   absolute;
+        top:                        0;
+        left:                       0;
+        height:                     100%;
+        width:                      100%;
+        opacity:                    .3;
+
+        video {
+            width:                  100%;
+            height:                 100%;
+            object-fit:             cover;
+        }
+    }
+}
+
 
 header {
 
     position:                   relative;
     height:                     90vh;
     clip-path:                  polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-position:        center !important;
+    background-size:            cover !important;
 }
 
 main {
@@ -29,41 +108,18 @@ main {
     margin-top:                 -15vh;
     padding-top:                15vh;
     padding-bottom:             $padding-xx;
-    background:                 $clr-wht;
-
 }
+
 
 section {
 
-    padding:                    6rem 0;  
-
-    &.spin-section {
-
-        @include lkd-flex($jus: space-between);
-        padding:                10rem 0;
-        max-width:              1200px;
-        margin:                 0 auto;
-
-        lkd-spin {
-            
-            margin:             1rem;
-        }
-    }
+    padding:                    6rem 0;
 }
 
-.vyg-section {
 
-    @include lkd-flex($jus: center);
-    position:                   relative;
-    height:                     90vh;
-    margin-top:                 6rem;
-    clip-path:                  polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-}
 
-.vyg-section-footer {
-    
-    width:                      100%;
-    margin-top:                 6rem;
-    text-align:                 center;
-}
+
+
+
+
 

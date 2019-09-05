@@ -1,10 +1,40 @@
-import { BlockTrimg, Catcheye, BlockCard } from '../models/lkd-interfaces';
+import { BlockTrimg, Catcheye, BlockCard, StoryCard } from '../models/lkd-interfaces';
+
+// ----------------------------------------------
+// --- TITLES
+// ----------------------------------------------
+
+export const titles: any = {
+
+    trimage: 'the ultimate adventures',
+    testimonials: 'we make people happy',
+};
+
+// ----------------------------------------------
+// --- BUTTONS
+// ----------------------------------------------
+
+export const buttons: any = {
+
+    spin: 'discover all tours',
+    testimonials: 'more experiences'
+};
+
+// ----------------------------------------------
+// --- MEDIA
+// ----------------------------------------------
+
+export const videoBg: any = {
+    mp4: '/templates/voyager/videos/video.mp4',
+    webm: '/templates/voyager/videos/video.webm'
+};
 
 // ----------------------------------------------
 // --- HEADER
 // ----------------------------------------------
 
 export const catcheyeHeader: Catcheye = {
+
     title: 'outdoors',
     subtitle: 'is where life happens',
     c2a: 'let\'s tour',
@@ -13,11 +43,24 @@ export const catcheyeHeader: Catcheye = {
 };
 
 // ----------------------------------------------
+// --- TITLES
+// ----------------------------------------------
+
+
+
+// ----------------------------------------------
+// --- BUTTONS
+// ----------------------------------------------
+
+export const buttonsHome: string[] = [
+    ''
+];
+
+// ----------------------------------------------
 // --- BLOCK TRIMAGE
 // ----------------------------------------------
 
 export const blockTri: BlockTrimg = {
-    title: 'the ultimate adventures',
     button: {
         text: 'Learn More',
         link: '/templates',
@@ -134,6 +177,34 @@ export const spins = [
             c2a: 'book now!',
             link: ''
         }
+    }
+];
+
+// ----------------------------------------------
+// --- STORY CARD
+// ----------------------------------------------
+
+export const storyCards: StoryCard[] = [
+    {
+        name: 'mary smith',
+        title: 'I had the best week ever with my family',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio ea nemo voluptas. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio. ',
+        image: 'templates/voyager/images/nat-8.jpg',
+        skew: true
+    },
+    {
+        name: 'tony srna',
+        title: 'Great hollydays at the mountains',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio ea nemo voluptas. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio. ',
+        image: 'templates/voyager/images/nat-9.jpg',
+        skew: true
+    },
+    {
+        name: 'coco gata',
+        title: 'I had the hollydays at snow of my life',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio ea nemo voluptas. Praesentium iusto nisi dolor natus veniam tempora accusamus distinctio. ',
+        image: 'templates/voyager/images/nat-10.jpg',
+        skew: true
     }
 ];
 

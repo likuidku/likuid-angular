@@ -58,6 +58,15 @@ export interface Card {
   };
 }
 
+export interface StoryCard {
+
+  name: string;
+  title: string;
+  text: string;
+  image: string;
+  skew?: boolean;
+}
+
 export interface Button {
 
   text: string;
@@ -86,10 +95,10 @@ export interface BlockText {
 
 export interface BlockTrimg {
 
-  title: string;
-  button?: Button;
   blockTexts: BlockText[];
   tri: string[];
+  title?: string;
+  button?: Button;
 }
 
 export interface BlockCard {

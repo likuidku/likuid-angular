@@ -17,7 +17,7 @@ import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component
     LkdBlockComponent,
     LkdBlockTrimageComponent,
     LkdBlockTextComponent,
-    LkdBlockCardComponent
+    LkdBlockCardComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +30,7 @@ import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component
     LkdBlockComponent,
     LkdBlockTrimageComponent,
     LkdBlockTextComponent,
-    LkdBlockCardComponent
+    LkdBlockCardComponent,
   ]
 })
 export class LayoutModule { }

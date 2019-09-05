@@ -10,7 +10,7 @@
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "directive-selector": [
-      true,
+      false,
       "attribute",
       "lkd",
       "camelCase"
@@ -28,7 +28,7 @@
     "interface-name": false,
     "max-classes-per-file": false,
     "max-line-length": [
-      true,
+      false,
       140
     ],
     "member-access": false,

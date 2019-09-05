@@ -21,6 +21,8 @@ $font:                                  #{$font-name}, sans-serif;
 $enable-flat-mode:                      false;
 $enable-global-style:                   false;
 $enable-txt-color-attributes:           true;
+$enable-txt-gradient:                   true;
+$enable-txt-double-gradient:            true;
 
 // --- NAVBAR -----------------------------------
 
@@ -196,7 +198,7 @@ $line-height:                           1.7;
 
 $lkd-ani-time:                          .2s;
 $lkd-bezier:                            cubic-bezier(.17,1.1,.01,.9);
-$lkd-time-curve:                        $lkd-ani-time $lkd-bezier;
+$lkd-time-curve:                        $lkd-bezier $lkd-ani-time;
 $lkd-transition:                        all $lkd-time-curve;
 
 // --------------------------------------------------

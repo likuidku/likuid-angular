@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { blockTri, catcheyeHeader, blockCards, spins } from '../../data/voyager.data';
+import { blockTri, catcheyeHeader, blockCards, spins, titles, buttons, storyCards, videoBg } from '../../data/voyager.data';
 
 @Component({
   selector: 'lkd-template-voyager',
@@ -12,10 +12,14 @@ export class TemplateVoyagerComponent implements OnInit {
   // --- DATA BINDING
   // ----------------------------------------------
 
+  titles         = titles;
+  buttons        = buttons;
   catcheyeHeader = catcheyeHeader;
-  blockTri = blockTri;
-  blockCards = blockCards;
-  spins = spins;
+  blockTri       = blockTri;
+  blockCards     = blockCards;
+  spins          = spins;
+  storyCards     = storyCards;
+  videoBg        = videoBg;
 
   // ----------------------------------------------
   // --- PROPERTIES
@@ -30,12 +34,7 @@ export class TemplateVoyagerComponent implements OnInit {
 
   ngOnInit() {
     this.renderer.setStyle(this.headerBack.nativeElement, 'background-image', this.catcheyeHeader.back);
-    this.renderer.setStyle(this.headerBack.nativeElement, 'background-position', 'center');
-    this.renderer.setStyle(this.headerBack.nativeElement, 'background-size', 'cover');
     this.renderer.setStyle(this.blockCrdBack.nativeElement, 'background', this.blockCards.back);
-    this.renderer.setStyle(this.blockCrdBack.nativeElement, 'background-position', 'center');
-    this.renderer.setStyle(this.blockCrdBack.nativeElement, 'background-size', 'cover');
+    console.log(this.videoBg);
   }
-
-
 }

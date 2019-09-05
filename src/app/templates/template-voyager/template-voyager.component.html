@@ -1,19 +1,42 @@
 <header #headerBack>
-    <div class="vyg-gradient"></div>
+    <div class="gradient"></div>
     <lkd-catcheye [data]="catcheyeHeader"></lkd-catcheye>
 </header>
 <main>
     <section>
+        <div class="section-heading">
+            <h1>{{titles.trimage}}</h1>
+        </div>
         <lkd-block-trimage [data]="blockTri"></lkd-block-trimage>
     </section>
-    <section class="vyg-section" #blockCrdBack>
-        <div class="vyg-gradient"></div>
+    <section class="polygon-back" #blockCrdBack>
+        <div class="gradient"></div>
         <lkd-block-card [data]="blockCards"></lkd-block-card>
     </section>
-    <section class="spin-section">
-        <lkd-spin *ngFor="let spin of spins, let i = index" [config]="spins[i]"></lkd-spin>
-        <div class="vyg-section-footer">
-            <lkd-btn-vyg scs>discover all tours</lkd-btn-vyg>
+    <section>
+        <div class="section-prices">
+            <lkd-spin *ngFor="let spin of spins, let i = index" [config]="spins[i]"></lkd-spin>
+        </div>
+        <div class="section-footer">
+            <lkd-btn-vyg scs>{{buttons.spin}}</lkd-btn-vyg>
+        </div>
+    </section>
+    <section class="section-tours">
+        <div class="section-heading">
+            <h1>{{titles.testimonials}}</h1>
+        </div>
+        <div class="testimonials">
+            <lkd-story *ngFor="let card of storyCards, let i = index" [config]="storyCards[i]"></lkd-story>
+        </div>
+        <div class="section-footer">
+            <lkd-btn-vyg scs>{{buttons.testimonials}}</lkd-btn-vyg>
+        </div>
+        <div class="bg-video">
+            <video autoplay muted loop src="../../../assets{{videoBg.mp4}}">
+                <source src="../../../assets{{videoBg.mp4}}" type="video/mp4">
+                <source src="../../../assets{{videoBg.webm}}" type="video/webm">
+                    Your browser is not supported.
+            </video>
         </div>
     </section>
 </main>
