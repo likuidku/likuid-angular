@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
-import { FormatterService } from '../services/lkd-formatter.service';
 
 @Directive({
   // tslint:disable-next-line: directive-selector

@@ -18,7 +18,8 @@ import {
   FlatTypeDirective,
   SolidTypeDirective,
   FilledTypeDirective,
-  LkdTypeDirective
+  LkdTypeDirective,
+  VygTypeDirective
 } from './lkd-types.directive';
 import {
   LkdOnDirective,
@@ -64,6 +65,7 @@ import { LkdBtnVygDirective, LkdBtnVygAttrDirective } from './lkd-btn-vyg.direct
     SolidTypeDirective,
     FilledTypeDirective,
     LkdTypeDirective,
+    VygTypeDirective,
     // --- BEHAVIOR DIRECTIVES -----------------------
     LkdOnDirective,
     LkdOffDirective,
@@ -107,6 +109,7 @@ import { LkdBtnVygDirective, LkdBtnVygAttrDirective } from './lkd-btn-vyg.direct
     SolidTypeDirective,
     FilledTypeDirective,
     LkdTypeDirective,
+    VygTypeDirective,
     // --- BEHAVIOR DIRECTIVES -----------------------
     LkdOnDirective,
     LkdOffDirective,

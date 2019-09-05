@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
-import { FormatterService } from '../services/lkd-formatter.service';
 
 // --------------------------------------------------
 // --- PRIMARY COLOR
@@ -19,9 +18,8 @@ export class PrimaryColorDirective {
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
-    private formatter: FormatterService
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -43,9 +41,8 @@ export class SecondaryColorDirective {
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
-    private formatter: FormatterService
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -66,10 +63,9 @@ export class InfoColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -90,10 +86,9 @@ export class SuccessColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -114,10 +109,9 @@ export class AlertColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -138,10 +132,9 @@ export class DangerColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -162,10 +155,9 @@ export class ExtraColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -186,10 +178,9 @@ export class DarkColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -210,10 +201,9 @@ export class GrayColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -234,9 +224,8 @@ export class WhiteColorDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }

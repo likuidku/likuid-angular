@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
-import { FormatterService } from '../services/lkd-formatter.service';
 
 // --------------------------------------------------
 // --- BASIC STYLE
@@ -18,10 +17,9 @@ export class BasicTypeDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -42,10 +40,9 @@ export class FlatTypeDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -66,10 +63,9 @@ export class SolidTypeDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -90,10 +86,9 @@ export class FilledTypeDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }
 
@@ -114,9 +109,31 @@ export class LkdTypeDirective {
 
   constructor(
     private element: ElementRef,
-    private renderer: Renderer2,
-    private formatter: FormatterService
+    private renderer: Renderer2
   ) {
-    this.formatter.addClass(this.addClass, this.element, this.renderer);
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
+  }
+}
+
+// --------------------------------------------------
+// --- VYG STYLE
+// --------------------------------------------------
+
+@Directive({
+  // tslint:disable-next-line: directive-selector
+  selector: '[vyg]'
+})
+export class VygTypeDirective {
+
+  // --- CLASS TO ADD --------------------------------
+
+  private addClass = 'vyg';
+
+
+  constructor(
+    private element: ElementRef,
+    private renderer: Renderer2
+  ) {
+    this.renderer.addClass(this.element.nativeElement, this.addClass);
   }
 }

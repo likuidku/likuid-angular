@@ -12,7 +12,6 @@ import {
   AfterViewChecked,
   OnInit
 } from '@angular/core';
-import { FormatterService } from '../../services/lkd-formatter.service';
 import { ViewerService } from '../../services/lkd-viewer.service';
 
 // --------------------------------------------------
@@ -59,7 +58,6 @@ export class LkdViewerComponent implements OnInit, AfterViewInit, OnChanges, Aft
   public activeLabel = '';
 
   constructor(
-    private formatter: FormatterService,
     private renderer: Renderer2,
     public viewerService: ViewerService
   ) {}
@@ -83,11 +81,11 @@ export class LkdViewerComponent implements OnInit, AfterViewInit, OnChanges, Aft
   selectView(label: string): void {
     this.viewList.forEach((view) => {
       if (view.title === label) {
-        this.formatter.addClass('active', view.ref, this.renderer);
+        this.renderer.addClass(view.ref.nativeElement, 'active');
         this.activeLabel = label;
         this.viewerService.activateLabel(label);
       } else {
-        this.formatter.removeClass('active', view.ref, this.renderer);
+        this.renderer.removeClass(view.ref.nativeElement, 'active');
       }
     });
   }

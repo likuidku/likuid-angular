@@ -10,9 +10,8 @@ export class LkdButtonComponent implements OnInit {
   constructor(
     private button: ElementRef,
     private renderer: Renderer2,
-    private formatter: FormatterService
   ) {
-    this.formatter.addClass('lkd-btn', this.button, this.renderer);
+    this.renderer.addClass(this.button.nativeElement, 'lkd-btn');
   }
 
   ngOnInit() {

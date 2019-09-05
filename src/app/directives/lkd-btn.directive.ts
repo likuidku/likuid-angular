@@ -23,6 +23,6 @@ export class LkdBtnDirective implements OnInit {
 
   ngOnInit() {
     this.btnClass = this.formatter.generatorClassLKD('btn', this.format);
-    this.formatter.addClass(this.btnClass, this.button, this.renderer);
+    this.renderer.addClass(this.button.nativeElement, this.btnClass);
   }
 }
