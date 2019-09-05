@@ -1,4 +1,4 @@
-import { Injectable, ElementRef, Renderer2 } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +16,13 @@ export class FormatterService {
 
   // --- LINEAR GRADIENT -----------------------------
 
-  linearGradientBack(colorA: string, colorB: string, image?: string) {
-    if (image) {
+  linearGradientBack(colorA?: string, colorB?: string, image?: string) {
+    if (colorA && colorB && image) {
       return `linear-gradient(to right bottom, ${colorA}, ${colorB}), ${image}`;
-    } else {
+    } else if (colorA && colorB && !image) {
       return `linear-gradient(to right bottom, ${colorA}, ${colorB})`;
+    } else if (colorA && !colorB && !image) {
+      return `linear-gradient(to right bottom, ${colorA}, transparent)`;
     }
   }
 

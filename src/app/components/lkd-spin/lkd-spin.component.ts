@@ -12,7 +12,6 @@ export class LkdSpinComponent implements OnInit {
 
   @ViewChild('back', {static: true})      backGradient: ElementRef;
   @ViewChild('image', {static: true})     frontImage: ElementRef;
-  @ViewChild('gradient', {static: true})  frontGradient: ElementRef;
   @ViewChild('title', {static: true})     titleGradient: ElementRef;
 
   constructor(
