@@ -35,8 +35,39 @@
             <video autoplay muted loop src="../../../assets{{videoBg.mp4}}">
                 <source src="../../../assets{{videoBg.mp4}}" type="video/mp4">
                 <source src="../../../assets{{videoBg.webm}}" type="video/webm">
-                    Your browser is not supported.
+                    Your browser is not supported. You can make a favour to your self downloading Mozilla Firefox from https://www.mosilla.org
             </video>
+        </div>
+    </section>
+    <section class="section-book">
+        <div class="book" #book>
+            <div class="form-box">
+                <form>
+                    <div class="section-heading" id="form-title">
+                        <h1>{{bookForm.title}}</h1>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">{{bookForm.labels.name}}</label>
+                        <input  class="lkd-input" 
+                                type="text" 
+                                name="name"
+                                id="name"
+                                #name
+                                placeholder="{{bookForm.placeholders.name}}" 
+                                required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">{{bookForm.labels.email}}</label>
+                        <input  class="lkd-input" 
+                                type="text" 
+                                email="email"
+                                id="email"
+                                #email
+                                placeholder="{{bookForm.placeholders.email}}" 
+                                required>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </main>

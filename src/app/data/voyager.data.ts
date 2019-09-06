@@ -208,3 +208,21 @@ export const storyCards: StoryCard[] = [
     }
 ];
 
+// ----------------------------------------------
+// --- BOOK FORM
+// ----------------------------------------------
+
+export const bookForm: any = {
+
+    back: 'url(assets/templates/voyager/images/nat-10.jpg)',
+    title: 'start booking now',
+    placeholders: {
+        name: 'enter your name',
+        email: 'enter your email'
+    },
+    labels: {
+        name: 'full name',
+        email: 'email address'
+    }
+};
+

@@ -1,5 +1,15 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { blockTri, catcheyeHeader, blockCards, spins, titles, buttons, storyCards, videoBg } from '../../data/voyager.data';
+import {
+  blockTri,
+  catcheyeHeader,
+  blockCards,
+  spins,
+  titles,
+  buttons,
+  storyCards,
+  videoBg,
+  bookForm
+} from '../../data/voyager.data';
 
 @Component({
   selector: 'lkd-template-voyager',
@@ -20,6 +30,7 @@ export class TemplateVoyagerComponent implements OnInit {
   spins          = spins;
   storyCards     = storyCards;
   videoBg        = videoBg;
+  bookForm       = bookForm;
 
   // ----------------------------------------------
   // --- PROPERTIES
@@ -27,6 +38,7 @@ export class TemplateVoyagerComponent implements OnInit {
 
   @ViewChild('headerBack', {static: true}) headerBack: ElementRef;
   @ViewChild('blockCrdBack', {static: true}) blockCrdBack: ElementRef;
+  @ViewChild('book', {static: true}) bookBack: ElementRef;
 
   constructor(
     public renderer: Renderer2
@@ -35,6 +47,6 @@ export class TemplateVoyagerComponent implements OnInit {
   ngOnInit() {
     this.renderer.setStyle(this.headerBack.nativeElement, 'background-image', this.catcheyeHeader.back);
     this.renderer.setStyle(this.blockCrdBack.nativeElement, 'background', this.blockCards.back);
-    console.log(this.videoBg);
+    this.renderer.setStyle(this.bookBack.nativeElement, 'background', this.bookForm.back);
   }
 }

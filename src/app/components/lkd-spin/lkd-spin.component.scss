@@ -31,7 +31,7 @@
     border-radius:              $corner-global;
     transition:                 all .8s ease;
     backface-visibility:        hidden;
-    box-shadow:                 0 1.5rem 3rem rgba($clr-sdw, .3);
+    box-shadow:                 $shadow-fly;
 
     &.front {
 

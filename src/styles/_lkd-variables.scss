@@ -112,10 +112,11 @@ $border-line:                           solid;
 
 // --- SHADOWS ----------------------------------
 
-$shadow-normal:                         0 .06rem .25rem $clr-sdw;
-$shadow-hover:                          0 .03rem .15rem $clr-sdw;
+$shadow-normal:                         0 .06rem .25rem rgba($clr-sdw, .3);
+$shadow-hover:                          0 .03rem .15rem rgba($clr-sdw, .3);
 $shadow-active:                         inset $shadow-normal;
-$shadow-fly:                            0 1rem 2rem $clr-sdw;
+$shadow-vyg:                            $shadow-normal;
+$shadow-fly:                            0 1.5rem 3rem rgba($clr-sdw, .3);
 
 // --- BACKGROUNDS ------------------------------
 
