@@ -8,7 +8,10 @@ import {
   buttons,
   storyCards,
   videoBg,
-  bookForm
+  bookForm,
+  footer,
+  navigation,
+  spinPopups
 } from '../../data/voyager.data';
 
 @Component({
@@ -22,6 +25,7 @@ export class TemplateVoyagerComponent implements OnInit {
   // --- DATA BINDING
   // ----------------------------------------------
 
+  navigation     = navigation;
   titles         = titles;
   buttons        = buttons;
   catcheyeHeader = catcheyeHeader;
@@ -31,6 +35,8 @@ export class TemplateVoyagerComponent implements OnInit {
   storyCards     = storyCards;
   videoBg        = videoBg;
   bookForm       = bookForm;
+  footer         = footer;
+  spinPopups     = spinPopups;
 
   // ----------------------------------------------
   // --- PROPERTIES
@@ -48,5 +54,6 @@ export class TemplateVoyagerComponent implements OnInit {
     this.renderer.setStyle(this.headerBack.nativeElement, 'background-image', this.catcheyeHeader.back);
     this.renderer.setStyle(this.blockCrdBack.nativeElement, 'background', this.blockCards.back);
     this.renderer.setStyle(this.bookBack.nativeElement, 'background', this.bookForm.back);
+    console.log(footer.company);
   }
 }

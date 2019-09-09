@@ -22,6 +22,8 @@ import { LkdCardComponent } from './lkd-card/lkd-card.component';
 import { LkdTableComponent } from './lkd-table/lkd-table.component';
 import { LkdSpinComponent } from './lkd-spin/lkd-spin.component';
 import { LkdStoryComponent } from './lkd-story/lkd-story.component';
+import { LkdNavbtnComponent } from './lkd-navbtn/lkd-navbtn.component';
+import { LkdPopupComponent } from './lkd-popup/lkd-popup.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { LkdStoryComponent } from './lkd-story/lkd-story.component';
     LkdTableComponent,
     LkdSpinComponent,
     LkdStoryComponent,
+    LkdNavbtnComponent,
+    LkdPopupComponent,
   ],
   imports: [
     CommonModule,
@@ -59,7 +63,9 @@ import { LkdStoryComponent } from './lkd-story/lkd-story.component';
     LkdAlertLinkDirective,
     LkdCardComponent,
     LkdSpinComponent,
-    LkdStoryComponent
+    LkdStoryComponent,
+    LkdNavbtnComponent,
+    LkdPopupComponent
   ]
 })
 export class ComponentsModule { }

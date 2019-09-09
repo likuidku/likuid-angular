@@ -1,0 +1,31 @@
+<div class="lkd-navbtn-box">
+    <!-------------------------------------------
+    ------- lkd nav toggle
+    --------------------------------------------->
+    <input  type="checkbox" 
+            class="lkd-navbtn-toggle" 
+            id="lkd-navbtn-toggle">
+    <!-------------------------------------------
+    ------- lkd nav icon button
+    --------------------------------------------->
+    <label  for="lkd-navbtn-toggle" 
+            class="lkd-navbtn-btn">
+            <span class="lkd-navbtn-icon"></span>
+    </label>
+    <!-------------------------------------------
+    ------- lkd nav background
+    --------------------------------------------->
+    <div class="lkd-navbtn-bg"></div>
+    <!-------------------------------------------
+    ------- lkd nav items
+    --------------------------------------------->
+    <nav class="lkd-navbtn-nav">
+        <ul class="lkd-navbtn-nav-items">
+            <li *ngFor="let item of config.menu.items, let i = index">
+                <a href="{{config.menu.links[i]}}" class="lkd-navbtn-nav-item">
+                    {{config.menu.items[i]}}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

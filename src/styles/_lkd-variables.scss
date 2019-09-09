@@ -224,9 +224,19 @@ $lkd-btn-colors:                        'primary' 'secondary' 'info' 'success' '
 $lkd-btn-default-type:                  'basic';
 $lkd-btn-default-color:                 'primary';
 
-// --------------------------------------------------
+// ----------------------------------------------
+// --- FORMS
+// ----------------------------------------------   
+
+$input-error-color:                     $clr-dgr;
+$input-success-color:                   $clr-scs;
+$input-focus-color:                     $clr-inf;
+$input-normal-color:                    $clr-drk;
+$input-radio-color:                     $clr-scs;
+
+// ----------------------------------------------
 // --- LKD SIDEBAR
-// --------------------------------------------------
+// ----------------------------------------------
 
 $lkd-sidebar-text:                      $clr-ext;
 $lkd-sidebar-back:                      'white';

@@ -1,0 +1,152 @@
+@import '../../../styles/lkd-commons';
+
+
+.lkd-navbtn-btn {
+
+    @include lkd-flex($jus: center);
+    cursor:                 pointer;
+    z-index:                300;
+    position:               fixed;
+    height:                 4rem;
+    width:                  4rem;
+    top:                    2.5rem;
+    right:                  2.5rem;
+    border-radius:          100%;
+    background-color:       $clr-wht;
+    box-shadow:             $shadow-normal;
+    transition:             all .3s;
+
+    .lkd-navbtn-icon {
+
+        position:               relative;
+
+        &,
+        &::before,
+        &::after {
+    
+            display:            inline-block;
+            width:              1.8rem;
+            height:             2px;
+            background-color:   $clr-scs;
+            transition:         all .3s;
+        }
+    
+    
+        &::after,
+        &::before {
+    
+            content:            "";
+            position:           absolute;
+            left:               0;
+        }
+    
+        &::before {
+            
+            top: -.5rem;
+        }
+
+        &::after {
+            
+            top: .5rem;
+        }
+    }
+
+    &:hover {
+
+        box-shadow:         0 .2rem .3rem rgba($clr-sdw, .5);
+
+        .lkd-navbtn-icon::before {
+
+            top: -.7rem;
+        }
+
+        .lkd-navbtn-icon::after {
+
+            top: .7rem;
+        }
+    }
+
+}
+
+.lkd-navbtn-nav {
+
+    z-index:                200;
+    display:                none;
+    position:               fixed;
+    top:                    0;
+    left:                   0;
+    width:                  100vw;
+    height:                 100vh;
+}
+
+.lkd-navbtn-nav-items {
+
+    @include center();
+    text-align:         center;
+
+    li a.lkd-navbtn-nav-item {
+            
+        @include lkd-title-slim($clr-wht, $transform: uppercase);
+        display:            block;
+        margin:             1.5rem auto;
+        padding:            .5rem 1.5rem;
+        background-image:   linear-gradient(120deg, transparent 0%, transparent 50%, $clr-wht 50%);
+        background-size:    250%;
+        transition:         all .5s;
+
+
+        &:hover,
+        &:active {
+            
+            background-position: 100%;
+            color:          $vyg-sry;
+            transform:      translateX(1rem);
+        }
+    }
+}
+
+.lkd-navbtn-bg {
+
+    z-index:                100;
+    height:                 3rem;
+    width:                  3rem;
+    border-radius:          100%;
+    position:               fixed;
+    top:                    3rem;
+    right:                  3rem;
+    background-image:       radial-gradient($vyg-pry, $vyg-sry);
+    transition:             all $lkd-bezier .8s;
+}
+
+.lkd-navbtn-toggle {
+
+    display:                none;
+}
+
+.lkd-navbtn-toggle:checked ~ .lkd-navbtn-bg {
+
+    transform:              scale(100);
+}
+
+.lkd-navbtn-toggle:checked ~ .lkd-navbtn-nav {
+
+    display:                block;
+}
+
+.lkd-navbtn-toggle:checked ~ .lkd-navbtn-btn .lkd-navbtn-icon  {
+
+    background-color:       transparent;
+
+    &::before {
+
+        transform:          rotate(135deg);
+        top:                0;
+    }
+
+    &::after {
+       
+        transform:          rotate(-135deg);
+        top:                0;
+    }
+}
+

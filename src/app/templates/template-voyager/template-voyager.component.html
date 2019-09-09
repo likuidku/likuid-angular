@@ -1,17 +1,34 @@
+<!-------------------------------------------
+------- NAV SECTION 
+--------------------------------------------->
+
+<lkd-navbtn [config]="navigation"></lkd-navbtn>
+
+<!-------------------------------------------
+------- HEADER SECTION
+--------------------------------------------->
 <header #headerBack>
     <div class="gradient"></div>
     <lkd-catcheye [data]="catcheyeHeader"></lkd-catcheye>
 </header>
+<!-------------------------------------------
+------- MAIN SECTIONS
+--------------------------------------------->
 <main>
+    <!----------------------------------------
+    ------- TRI IMAGE SECTION
+    ----------------------------------------->
     <section>
         <div class="section-heading">
             <h1>{{titles.trimage}}</h1>
         </div>
         <lkd-block-trimage [data]="blockTri"></lkd-block-trimage>
     </section>
-    <section class="polygon-back" #blockCrdBack>
+    <section class="polygon-back section-blockCards" #blockCrdBack>
         <div class="gradient"></div>
-        <lkd-block-card [data]="blockCards"></lkd-block-card>
+        <div class="blockCards-box">
+            <lkd-card *ngFor="let card of blockCards.cards, let i = index" [data]="blockCards.cards[i]"></lkd-card>
+        </div>
     </section>
     <section>
         <div class="section-prices">
@@ -46,29 +63,78 @@
                     <div class="section-heading" id="form-title">
                         <h1>{{bookForm.title}}</h1>
                     </div>
-                    <div class="form-group">
-                        <label for="name">{{bookForm.labels.name}}</label>
+                    <div class="lkd-input-group">
                         <input  class="lkd-input" 
-                                type="text" 
-                                name="name"
-                                id="name"
-                                #name
-                                placeholder="{{bookForm.placeholders.name}}" 
-                                required>
+                        type="text" 
+                        name="name"
+                        id="name"
+                        #name
+                        placeholder="{{bookForm.placeholders.name}}" 
+                        autocomplete="false"
+                        required>
+                        <label class="lkd-input-label" for="name">{{bookForm.labels.name}}</label>
                     </div>
-                    <div class="form-group">
-                        <label for="email">{{bookForm.labels.email}}</label>
+                    <div class="lkd-input-group">
                         <input  class="lkd-input" 
-                                type="text" 
-                                email="email"
-                                id="email"
-                                #email
-                                placeholder="{{bookForm.placeholders.email}}" 
-                                required>
+                        type="email" 
+                        email="email"
+                        id="email"
+                        #email
+                        placeholder="{{bookForm.placeholders.email}}"
+                        autocomplete="false"
+                        required>
+                        <label class="lkd-input-label" for="email">{{bookForm.labels.email}}</label>
+                    </div>
+                    <div class="lkd-radio-group" *ngIf="bookForm.radios">
+                        <div class="lkd-radio-group">
+                            <input type="radio" class="lkd-radio-input" id="radioOne" name="radioOption">
+                            <label for="radioOne" class="lkd-radio-label">
+                                <span class="radio-button"></span>{{bookForm.radios.first}}
+                            </label>
+                        </div>
+                        <div class="lkd-radio-group">
+                            <input type="radio" class="lkd-radio-input" id="radioTwo" name="radioOption">
+                            <label for="radioTwo" class="lkd-radio-label">
+                                <span class="radio-button"></span>{{bookForm.radios.second}}
+                            </label>
+                        </div>
+                        <div class="lkd-form-group">
+                            <lkd-btn-vyg scs>{{bookForm.button.text}}</lkd-btn-vyg>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 </main>
+<!-------------------------------------------
+------- FOOTER SECTION
+--------------------------------------------->
+<footer>
+    <div class="footer-company">
+        <img [src]="footer.logo" alt="" class="footer-logo">
+        <h3 *ngIf="footer.company">{{footer.company}}</h3>
+    </div>
+    <div class="footer-navigation">
+        <ul class="nav">
+            <li class="nav-item" 
+                *ngFor="let item of footer.menu.nav, let i = index">
+                <a href="{{footer.menu.links[i]}}" class="nav-link">{{footer.menu.nav[i]}}</a>
+            </li>
+        </ul>
+        <ul class="address">
+            <li *ngFor="let line of footer.address">
+                {{line}}
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<!-------------------------------------------
+------- LKD POPUP FOR SPIN
+--------------------------------------------->
+
+<div class="lkd-spin-popup">
+    <lkd-popup [config]="spinPopups"></lkd-popup>
+</div>
 

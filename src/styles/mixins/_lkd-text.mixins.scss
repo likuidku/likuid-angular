@@ -19,7 +19,7 @@
     @include lkd-text($color, $size, $transform: $transform);
 }
 
-@mixin lkd-title-slim($color: $text-color, $size: $lkd-title-n, $transform: capitalize) {
+@mixin lkd-title-slim($color: $text-color, $size: $text-title-n, $transform: capitalize) {
 
     @include lkd-text($color, $size, $text-slim, .8rem, $transform: $transform);
 }

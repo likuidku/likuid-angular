@@ -1,0 +1,119 @@
+
+// ----------------------------------------------
+// --- GROUPS
+// ----------------------------------------------
+.lkd-form-group {
+
+    padding:    3rem 0;
+}
+
+.lkd-input-group {
+    
+    @include lkd-flex(column, $aln: left);
+    padding:                    1rem 0;
+}
+
+.lkd-radio-group {
+
+    display:                    inline-block;
+    padding:                    .5rem 1rem 0 0;
+}
+
+// ----------------------------------------------
+// --- INPUTS
+// ----------------------------------------------
+
+.lkd-input {
+
+    @include lkd-text($text-color, $text-base, $text-light);
+    display:                    block;
+    padding:                    .5rem;
+    border:                     none;
+    border-bottom:              2px solid $input-normal-color;
+    background:                 none;
+    font-family:                inherit;
+    transition:                 all .3s;
+
+    &::-webkit-input-placeholder {
+
+        color:                  $input-normal-color;
+    }
+
+    &:placeholder-shown ~ .lkd-input-label {
+
+        opacity:                    0;
+        visibility:                 hidden;
+        transform:                  translateY(-100%);
+        transition:                 all .5s;
+    }
+
+    &:focus {
+
+        outline:                none;
+        border-bottom:          2px solid $input-focus-color;
+        border-radius:          $corner-global;
+        box-shadow:             $shadow-normal;
+        transition:             all .2;
+
+        &:invalid {
+
+            border-bottom:      2px solid $input-error-color;
+
+            & ~ .lkd-input-label {
+
+                opacity:        1;
+                visibility:     visible; 
+                color:          $input-error-color;
+                transform:      translateY(0);
+                transition:     all .2s;
+            }
+        }
+    }
+}
+
+.lkd-input-label {
+
+    @include lkd-pgraph($input-focus-color, $size: $text-small);
+    display:                    block;
+    padding:                    .5rem;
+    
+}
+
+.lkd-radio-label {
+
+    @include lkd-flex();
+
+    .radio-button {
+
+        position:               relative;
+        display:                inline-block;
+        height:                 1.2rem;
+        width:                  1.2rem;
+        margin-right:           .3rem;
+        border:                 2px solid $input-radio-color;
+        border-radius:          50px;
+
+        &::after {
+
+            
+            @include lkd-center();
+            content:            '';
+            display:            block;
+            height:             .6rem;
+            width:              .6rem;
+            border-radius:      50px;
+            background-color:   $input-radio-color;
+            opacity:            0;
+            transition:          opacity .2s;
+        }
+    }
+}
+
+.lkd-radio-input {
+    display:                    none;
+}
+
+.lkd-radio-input:checked ~ .lkd-radio-label .radio-button::after {
+
+    opacity:                    1;
+}

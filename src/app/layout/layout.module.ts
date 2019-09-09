@@ -7,7 +7,6 @@ import { LkdBlockTrimageComponent } from './lkd-block-trimage/lkd-block-trimage.
 import { LkdBlockTextComponent } from './lkd-block-text/lkd-block-text.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../directives/directives.module';
-import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component';
 
 
 
@@ -17,7 +16,6 @@ import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component
     LkdBlockComponent,
     LkdBlockTrimageComponent,
     LkdBlockTextComponent,
-    LkdBlockCardComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +28,6 @@ import { LkdBlockCardComponent } from './lkd-block-card/lkd-block-card.component
     LkdBlockComponent,
     LkdBlockTrimageComponent,
     LkdBlockTextComponent,
-    LkdBlockCardComponent,
   ]
 })
 export class LayoutModule { }

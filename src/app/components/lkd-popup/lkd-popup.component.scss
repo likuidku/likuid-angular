@@ -1,0 +1,22 @@
+@import '../../../assets/../styles/lkd-commons';
+
+.lkd-popup {
+
+    z-index:                    1000;
+    position:                   fixed;
+    top:                        0;
+    left:                       0;
+    display:                    block;
+    width:                      100vw;
+    height:                     100vh;
+    background-color:           rgba($clr-drk, .9);
+    
+    .lkd-popup-box {
+        
+        @include center(fixed);
+        width:                  70%;
+        height:                 33rem;
+        border-radius:          $corner-global;
+        background-color:       $clr-wht;
+    }
+}

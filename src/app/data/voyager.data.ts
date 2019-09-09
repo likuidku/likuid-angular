@@ -1,6 +1,30 @@
 import { BlockTrimg, Catcheye, BlockCard, StoryCard } from '../models/lkd-interfaces';
 
 // ----------------------------------------------
+// --- NAVIGATION
+// ----------------------------------------------
+
+export const navigation = {
+
+    menu: {
+        items: [
+            'new tours',
+            'advantages',
+            'see prices',
+            'book now',
+            'contact us'
+        ],
+        links: [
+            '/new tours',
+            '/advantages',
+            '/prices',
+            '/book',
+            '/contact us'
+        ]
+    }
+};
+
+// ----------------------------------------------
 // --- TITLES
 // ----------------------------------------------
 
@@ -181,6 +205,14 @@ export const spins = [
 ];
 
 // ----------------------------------------------
+// --- SPINS POPUPS
+// ----------------------------------------------
+
+export const spinPopups = {
+
+};
+
+// ----------------------------------------------
 // --- STORY CARD
 // ----------------------------------------------
 
@@ -217,12 +249,51 @@ export const bookForm: any = {
     back: 'url(assets/templates/voyager/images/nat-10.jpg)',
     title: 'start booking now',
     placeholders: {
-        name: 'enter your name',
-        email: 'enter your email'
+        name: 'Please enter your full name',
+        email: 'Please enter your contact email'
     },
     labels: {
-        name: 'full name',
-        email: 'email address'
+        name: 'Please enter your full name',
+        email: 'Please enter your contact email'
+    },
+    radios: {
+        first: 'Small tour group',
+        second: 'Large tour group'
+    },
+    button: {
+        text: 'next step',
+        link: '#'
     }
 };
+
+// ----------------------------------------------
+// --- FOOTER
+// ----------------------------------------------
+
+export const footer = {
+
+    logo:   '../../assets/templates/voyager/icons/logo-header.svg',
+    company: 'outdoors',
+    menu: {
+        nav: [
+            'company',
+            'contact us',
+            'privacy policy',
+            'terms'
+        ],
+        links: [
+            '/company',
+            '/contact',
+            '/privacy',
+            '/terms'
+        ]
+    },
+    address: [
+        '46 Pimas & Verge Boulevard',
+        '09731 Yellow Beach',
+        'Hsiao Chu Ko Island'
+    ],
+};
+
+
 
