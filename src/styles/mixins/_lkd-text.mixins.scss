@@ -37,7 +37,7 @@
 }
 
 @mixin lkd-block-txt-title($color: $text-color) {
-    @include lkd-text($color, $size: $text-subtitle, $transform: uppercase);
+    @include lkd-text($color, $size: $text-subtitle, $transform: capitalize);
 }
 
 // --- SUBTITLES ------------------------------------

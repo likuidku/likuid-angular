@@ -162,6 +162,24 @@ export const spins = [
             msg: '€ 275',
             c2a: 'book now!',
             link: ''
+        },
+        popup: {
+            images: {
+                paths: [
+                    'assets/templates/voyager/images/nat-8.jpg',
+                    'assets/templates/voyager/images/nat-7.jpg'
+                ],
+                alts: [
+                    'image adventure',
+                    'image happyness'
+                ]
+            },
+            blockText: {
+                title: 'start booking now',
+                text:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!',
+                button: 'book now!',
+                link: '#'
+            }
         }
     },
     {
@@ -181,6 +199,24 @@ export const spins = [
             msg: '€ 440',
             c2a: 'book now!',
             link: ''
+        },
+        popup: {
+            images: {
+                paths: [
+                    'assets/templates/voyager/images/nat-8.jpg',
+                    'assets/templates/voyager/images/nat-7.jpg'
+                ],
+                alts: [
+                    'image adventure',
+                    'image happyness'
+                ]
+            },
+            blockText: {
+                title: 'start booking now',
+                text:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!',
+                button: 'book now!',
+                link: '#'
+            }
         }
     },
     {
@@ -200,17 +236,27 @@ export const spins = [
             msg: '€ 680',
             c2a: 'book now!',
             link: ''
+        },
+        popup: {
+            images: {
+                paths: [
+                    'assets/templates/voyager/images/nat-8.jpg',
+                    'assets/templates/voyager/images/nat-7.jpg'
+                ],
+                alts: [
+                    'image adventure',
+                    'image happyness'
+                ]
+            },
+            blockText: {
+                title: 'start booking now',
+                text:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis! Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!Aliquam veritatis autem aut error necessitatibus maiores excepturi voluptates! Fugiat, reprehenderit perferendis!',
+                button: 'book now!',
+                link: '#'
+            }
         }
     }
 ];
-
-// ----------------------------------------------
-// --- SPINS POPUPS
-// ----------------------------------------------
-
-export const spinPopups = {
-
-};
 
 // ----------------------------------------------
 // --- STORY CARD

@@ -1,3 +1,6 @@
+<!-------------------------------------------
+------- SPIN
+--------------------------------------------->
 <div class="spin">
     <div class="spin-side front">
         <div class="header" #image></div>
@@ -13,6 +16,10 @@
     <div class="spin-side back" #back>
         <p>{{config.back.text}}</p>
         <h3>{{config.back.msg}}</h3>
-        <lkd-btn-vyg routerLink="{{config.back.ling}}">{{config.back.c2a}}</lkd-btn-vyg>
+        <lkd-btn-vyg (click)="showPopup()">{{config.back.c2a}}</lkd-btn-vyg>
     </div>
 </div>
+<!-------------------------------------------
+------- POPUP
+--------------------------------------------->
+<lkd-popup #popup [config]="config.popup"></lkd-popup>

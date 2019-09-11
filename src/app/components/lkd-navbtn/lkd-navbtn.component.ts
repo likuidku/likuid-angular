@@ -12,7 +12,6 @@ export class LkdNavbtnComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.config);
   }
 
 }

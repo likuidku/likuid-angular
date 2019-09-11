@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { FormatterService } from '../../services/lkd-formatter.service';
+import { LkdPopupComponent } from '../lkd-popup/lkd-popup.component';
 
 @Component({
   selector: 'lkd-spin',
@@ -10,9 +11,19 @@ export class LkdSpinComponent implements OnInit {
 
   @Input() config: any;
 
+  // ----------------------------------------------
+  // --- BACKGROUNDS
+  // ----------------------------------------------
+
   @ViewChild('back', {static: true})      backGradient: ElementRef;
   @ViewChild('image', {static: true})     frontImage: ElementRef;
   @ViewChild('title', {static: true})     titleGradient: ElementRef;
+
+  // ----------------------------------------------
+  // --- POPUP
+  // ----------------------------------------------
+
+  @ViewChild('popup', {static: true})     popup: LkdPopupComponent;
 
   constructor(
     public renderer: Renderer2,
@@ -20,6 +31,7 @@ export class LkdSpinComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.popup.visible);
     // --- BACK SIDE BACKGROUND GRADIENT --------
 
     this.renderer.setStyle(
@@ -50,5 +62,10 @@ export class LkdSpinComponent implements OnInit {
         this.config.image
       )
     );
+  }
+
+  public showPopup() {
+    this.popup.visible = true;
+    console.log('popup');
   }
 }

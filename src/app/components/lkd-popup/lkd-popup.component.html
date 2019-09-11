@@ -1,6 +1,16 @@
-<div class="lkd-popup">
+<div class="lkd-popup" *ngIf="visible">
     <div class="lkd-popup-box">
-
-        popup content
+        <span class="close" (click)="closePopup()">x</span>
+        <div class="lkd-popup-left">
+            <img [src]="config.images.paths[0]" [alt]="config.images.alts[0]">
+            <img [src]="config.images.paths[1]" [alt]="config.images.alts[1]">
+        </div>
+        <div class="lkd-popup-right">
+            <div class="lkd-popup-text">
+                <h3 class="title">{{config.blockText.title}}</h3>
+                <p class="text">{{config.blockText.text}}</p>
+                <lkd-btn-vyg scs (click)="closePopup()">{{config.blockText.button}}</lkd-btn-vyg>
+            </div>
+        </div>
     </div>
 </div>

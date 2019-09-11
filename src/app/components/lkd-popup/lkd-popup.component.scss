@@ -10,13 +10,75 @@
     width:                      100vw;
     height:                     100vh;
     background-color:           rgba($clr-drk, .9);
+    transition:                 all .3s;
     
     .lkd-popup-box {
         
         @include center(fixed);
-        width:                  70%;
-        height:                 33rem;
-        border-radius:          $corner-global;
-        background-color:       $clr-wht;
+        @include lkd-flex($aln: flex-start);
+        width:                      70%;
+        border-radius:              $corner-global;
+        background-color:           $clr-wht;
+        overflow:               hidden;
+
+        .lkd-popup-left {
+
+            @include lkd-flex(column);
+            width:                  30%;
+            height:                 100%;
+
+            img {
+
+                display:            block;
+                width:              100%;    
+            }
+        }
+
+        .lkd-popup-right {
+
+            @include lkd-flex(column);
+            width:                  70%;
+            height:                 100%;
+            padding:                2rem 0;
+            
+            .lkd-popup-text {
+
+                padding:            2rem 4rem;
+
+                .title {
+
+                    @include lkd-subtitle-slim(transparent);
+                    @include lkd-text-gradient($vyg-pry);
+                    margin-bottom:  1rem;
+                }
+                
+                .text {
+
+                    @include lkd-block-txt-text;
+                    text-align:     justify;
+                    margin-bottom:  2rem;
+                    column-count:   2;
+                    column-gap:     2rem;
+                    column-rule:    1px solid $clr-lgt;
+                    hyphens:        auto;
+                }
+            }
+        }
+    }
+
+    .close {
+
+        position:               absolute;
+        cursor:                 pointer;
+        top:                    1rem;
+        right:                  2rem;
+        padding:                .5rem;
+        font-size:              1.5rem;
+        font-weight:            400;
+
+        &:hover {
+
+            color:              $vyg-sry;
+        }
     }
 }
