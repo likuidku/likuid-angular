@@ -12,6 +12,7 @@ import { TemplatesComponent } from './templates/templates.component';
 import { DocsComponent } from './docs/docs.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TemplatesModule } from '../templates/templates.module';
+import { DirectivesModule } from '../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TemplatesModule } from '../templates/templates.module';
     RouterModule,
     ComponentsModule,
     ViewsModule,
-    TemplatesModule
+    TemplatesModule,
+    DirectivesModule
   ],
   exports: [
     HomeComponent,

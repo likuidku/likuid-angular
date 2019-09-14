@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplatesComponent implements OnInit {
 
+  public show = 'traveler';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showTemplate(template: string) {
+    this.show = template;
   }
 
 }

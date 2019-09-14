@@ -1,3 +1,9 @@
 <div class="box-templates">
-    <lkd-template-voyager></lkd-template-voyager>
+    <div class="selector">
+        <lkd-pill pry (click)="showTemplate('voyager')">Voyager</lkd-pill>
+        <lkd-pill sry (click)="showTemplate('traveler')">Traveler</lkd-pill>
+    </div>
+    <lkd-template-voyager *ngIf="show === 'voyager'"></lkd-template-voyager>
+    <lkd-template-traveler *ngIf="show === 'traveler'"></lkd-template-traveler>
 </div>
+

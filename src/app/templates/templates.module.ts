@@ -4,12 +4,14 @@ import { TemplateVoyagerComponent } from './template-voyager/template-voyager.co
 import { ComponentsModule } from '../components/components.module';
 import { DirectivesModule } from '../directives/directives.module';
 import { LayoutModule } from '../layout/layout.module';
+import { TemplateTravelerComponent } from './template-traveler/template-traveler.component';
 
 
 
 @NgModule({
   declarations: [
-    TemplateVoyagerComponent
+    TemplateVoyagerComponent,
+    TemplateTravelerComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { LayoutModule } from '../layout/layout.module';
     LayoutModule
   ],
   exports: [
-    TemplateVoyagerComponent
+    TemplateVoyagerComponent,
+    TemplateTravelerComponent
   ]
 })
 export class TemplatesModule { }

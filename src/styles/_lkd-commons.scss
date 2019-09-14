@@ -22,7 +22,42 @@
 }
 
 html {
-    font-size:          $text-size;
+
+    // --- DESKTOP FIRST APPROACH ---------------
+
+    @include df-wide {
+        font-size:      112.5%;     // 1rem = 18px
+    }
+
+    @include df-desktop {
+        font-size:      100%;       // 1rem = 16px
+    }
+
+    @include df-tablet {
+        font-size:      87.5%;      // 1rem = 14px
+    }
+
+    @include df-phone {
+        font-size:      75%;        // 1rem = 12px
+    }
+
+    // --- MOVIL FIRST APPROACH -----------------
+
+    // @include mf-phone {
+    //     font-size:      75%;        // 1rem = 12px
+    // }
+
+    // @include mf-tablet {
+    //     font-size:      87.5%;      // 1rem = 14px
+    // }
+
+    // @include mf-desktop {
+    //     font-size:      100%;       // 1rem = 16px
+    // }
+
+    // @include mf-wide {
+    //     font-size:      112.5%;     // 1rem = 18px
+    // }
 }
 
 body {

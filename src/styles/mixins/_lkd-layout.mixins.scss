@@ -2,7 +2,46 @@
 // --- MEDIA QUERYS
 // ----------------------------------------------
 
+$phone:                           37.5em;   // 600px
+$tablet:                          56.25em;  // 900px
+$desktop:                         75em;     // 1200px
+$wide:                            112.5em;  // 1800px
 
+// ----------------------------------------------
+// --- DESKTOP FIRST MIXINS
+// ----------------------------------------------
+
+@mixin df-phone   { @media (max-width: $phone)    { @content }; }
+@mixin df-tablet  { @media (max-width: $tablet)   { @content }; }
+@mixin df-desktop { @media (max-width: $desktop)  { @content }; }
+@mixin df-wide    { @media (min-width: $wide)     { @content }; }
+
+// ----------------------------------------------
+// --- MEDIA QUERY MANAGER
+// ----------------------------------------------
+
+@mixin lkd-df($breakpoint) {
+
+    @media (max-width: $breakpoint)    { @content };
+}
+
+// ----------------------------------------------
+// --- MOVILE FIRST MIXINS
+// ----------------------------------------------
+
+@mixin mf-phone   { @media (min-width: $phone)    { @content }; }
+@mixin mf-tablet  { @media (min-width: $tablet)   { @content }; }
+@mixin mf-desktop { @media (min-width: $desktop)  { @content }; }
+@mixin mf-wide    { @media (max-width: $wide)     { @content }; }
+
+// ----------------------------------------------
+// --- MEDIA QUERY MANAGER
+// ----------------------------------------------
+
+@mixin lkd-mf($breakpoint) {
+
+    @media (min-width: $breakpoint)    { @content };
+}
 
 // ----------------------------------------------
 // --- FLEX
