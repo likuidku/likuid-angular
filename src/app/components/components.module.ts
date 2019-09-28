@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 // --- LIKUID MODULES --------------------------------
 import { DirectivesModule } from '../directives/directives.module';
 // --- COMPONENTS ------------------------------------
@@ -42,11 +43,12 @@ import { LkdPopupComponent } from './lkd-popup/lkd-popup.component';
     LkdSpinComponent,
     LkdStoryComponent,
     LkdNavbtnComponent,
-    LkdPopupComponent,
+    LkdPopupComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     DirectivesModule,
   ],
   exports: [

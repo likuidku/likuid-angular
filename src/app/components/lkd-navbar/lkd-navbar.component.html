@@ -2,15 +2,15 @@
   <!----- left logo & buttons bar ----->
   <div class="left-box">
     <!----- logo ----->
-    <img src="../../../assets/images/{{config.home.image}}" alt="logo">
-    <a id="logo" routerLink="{{config.home.link}}" routerLinkActive="active">{{config.home.name}}</a>
+    <img *ngIf="config.home" src="../../../assets/images/{{config.home.image}}" alt="logo">
+    <a *ngIf="config.home" id="logo" routerLink="{{config.home.link}}" routerLinkActive="active">{{config.home.name}}</a>
     <!----- buttons link bar ----->
     <ul class="buttons-box">
       <li *ngFor="let button of config.links"><a routerLink="{{button.link}}" routerLinkActive="active" class="nav-button">{{button.name}}</a></li>
     </ul>
   </div>
   <!----- right link external ----->
-  <div class="right-box">
+  <div class="right-box" *ngIf="config.external">
     <a href="{{config.external.link}}"><img src="../../../assets/images/{{config.external.image}}" alt=""></a>
   </div>
 </div>
