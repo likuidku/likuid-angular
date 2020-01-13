@@ -30,10 +30,6 @@ export const navBarMain: NavBar = {
       link: '/themes',
     },
     {
-      name: 'templates',
-      link: '/templates',
-    },
-    {
       name: 'docs',
       link: '/docs',
     }

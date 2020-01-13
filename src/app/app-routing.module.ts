@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 // --- TEMP ------------------------------------------
-import { TemplatesComponent } from './pages/templates/templates.component';
 import { DocsComponent } from './pages/docs/docs.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { ThemeComponent } from './pages/theme/theme.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
   ]
 },
   { path: 'themes', component: ThemeComponent },
-  { path: 'templates', component: TemplatesComponent },
   { path: 'docs', component: DocsComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
