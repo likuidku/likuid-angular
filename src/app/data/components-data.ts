@@ -57,7 +57,7 @@ export const sidebarComponents: Sidebar = {
     'alerts',
     'buttons',
     'cards',
-    'footers',
+    'pie',
     'menus',
     'sidebars',
     'tabs'

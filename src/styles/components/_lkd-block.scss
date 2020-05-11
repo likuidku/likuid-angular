@@ -5,7 +5,7 @@
 
         .title {
             h2 {
-                @include lkd-title-block();
+                // @include lkd-title-block();
                 padding: 10px 20px;
                 border-bottom: 1px solid $clr-lgt;
             }
