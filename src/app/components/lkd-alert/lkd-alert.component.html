@@ -1,8 +1,8 @@
-<ng-template #config>
+<ng-template #byConfig>
     <div class="back" *ngIf="visible">
         <div class="dialog">
             <div class="header">
-                <img *ngIf="config.icon" src="../../../assets/icons/{{config.icon}}" alt="">
+                <img *ngIf="config" src="../../../assets/icons/{{config.icon}}" alt="">
                 <h3>{{config.title}}</h3>
             </div>
             <div class="body" *ngIf="config.message || config.labels">
@@ -22,7 +22,7 @@
     </div>
 </ng-template>
 
-<ng-template #content>
+<ng-template #byContent>
     <div class="back" *ngIf="visible">
         <div class="dialog">
             <div class="header">
@@ -56,5 +56,5 @@
 
 
 
-<ng-container [ngTemplateOutlet]="config" *ngIf="config"></ng-container>
-<ng-container [ngTemplateOutlet]="content" *ngIf="!config"></ng-container>
+<ng-container [ngTemplateOutlet]="byConfig" *ngIf="config"></ng-container>
+<ng-container [ngTemplateOutlet]="byContent" *ngIf="!config"></ng-container>

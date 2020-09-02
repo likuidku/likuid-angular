@@ -15,7 +15,7 @@ export class AppComponent {
 
   public navbar = false;
 
-  constructor( private componentsData: ComponentsDataService ) {}
+  constructor( public componentsData: ComponentsDataService ) {}
 
   toggleMenu() {
     this.navbar = !this.navbar;

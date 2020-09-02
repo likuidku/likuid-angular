@@ -48,6 +48,7 @@ export class LkdAlertComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.config);
   }
 
   dismissAlert() {
