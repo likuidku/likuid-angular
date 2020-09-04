@@ -48,9 +48,9 @@
     @include lkd-text($color, $size, $spacing: $letter-spacing, $transform: $transform);
 }
 
-@mixin lkd-subtitle-slim($color: $text-color, $size: $text-subtitle, $transform: uppercase) {
+@mixin lkd-subtitle-slim($color: $text-color, $size: $text-subtitle, $transform: capitalize) {
 
-    @include lkd-text($color, $size, $text-light, .25rem, $transform: $transform);
+    @include lkd-text($color, $size, $text-slim, .25rem, $transform: $transform);
 }
 
 // ----------------------------------------------
@@ -58,12 +58,12 @@
 // ----------------------------------------------
 
 @mixin lkd-subtitle-block($color: $text-color, $size: $text-title-small) {
-    @include lkd-text($color, $size, $weight: $text-light, $spacing: .25rem);
+    @include lkd-text($color, $size, $weight: $text-slim, $spacing: .25rem);
 }
 
 // --- PARAGRAPHS -----------------------------------
 
-@mixin lkd-pgraph($color: $text-color, $size: $text-base, $weight: $text-light, $align: left, $spacing: 0, $line: $line-height) {
+@mixin lkd-pgraph($color: $text-color, $size: $text-base, $weight: $text-normal, $align: left, $spacing: 0, $line: $line-height) {
 
     @include lkd-text($color: $color, $size: $size, $weight: $weight, $spacing: $spacing, $line: $line);
     text-align: $align;
@@ -82,7 +82,7 @@
 }
 
 @mixin lkd-block-txt-text($color: $text-color) {
-    @include lkd-text($color, $size: $text-base, $weight: $text-light);
+    @include lkd-text($color, $size: $text-base, $weight: $text-slim);
 }
 
 // ----------------------------------------------

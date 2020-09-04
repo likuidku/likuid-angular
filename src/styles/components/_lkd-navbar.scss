@@ -35,6 +35,7 @@
     }
     #logo {
       @include lkd-subtitle-slim($color-normal, $transform: capitalize);
+      font-family: $font-lkd;
       margin: 0 $margin;
       transition: $lkd-transition;
       &:hover,

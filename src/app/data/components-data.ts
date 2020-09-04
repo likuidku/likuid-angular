@@ -18,7 +18,7 @@ export const navBarMain: NavBar = {
   },
   external: {
     image: 'github.png',
-    link: 'https://github.com/likuidku/ng-lkd-library',
+    link: 'https://github.com/likuidku/likuid-angular',
   },
   links: [
     {

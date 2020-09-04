@@ -21,7 +21,8 @@ header {
         height: 400px;
         // --- Main title
         h1 {
-            @include lkd-text($clr-wht, 3rem, $text-slim, 20px, $transform: uppercase);
+            @include lkd-text($clr-wht, 3rem, $text-slim, 20px, $transform: capitalize);
+            font-family: $font-lkd;
             margin-bottom: $margin-n;
         }
         // --- Subtitle    

@@ -2,9 +2,9 @@
 // --- FONT
 // ----------------------------------------------
 
-$font-name:                             'Roboto';
-@import                                 url('https://fonts.googleapis.com/css?family=#{$font-name}:100,300,400,700,900&display=swap');
-$font:                                  #{$font-name}, sans-serif;
+@import                                 url('https://fonts.googleapis.com/css2?family=Gruppo&family=Open+Sans:wght@300;400;700&display=swap');
+$font:                                  'Open Sans', sans-serif;
+$font-lkd:                              'Gruppo', sans-serif;
 
 // ----------------------------------------------
 // --- THEME
@@ -182,11 +182,9 @@ $text-title:                            $text-base * 3;
 
 // --- FONT WEIGHTS -----------------------------
 
-$text-slim:                             100;
-$text-light:                            300;
+$text-slim:                             300;
 $text-normal:                           400;
 $text-bold:                             700;
-$text-gordo:                            900;
 
 // --- SPACING ----------------------------------
 
